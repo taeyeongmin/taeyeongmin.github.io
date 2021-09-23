@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebStorage</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+  <style>
+    table#enroll{
+        /* border: 1px solid; */
+        border-spacing:10px;
+        width: 80vw;
+        margin: 0 auto;
+    }
+
+    table#enroll th{
+        text-align:right;
+        
+    }
+    table#enroll td.btn-wrapper{
+        text-align: center;
+        width: 300px;
+    }
+    .phone {
+        width:30px;
+    }
+    span.req{
+        color:red;
+    }
+    .short{
+        width:50px;
+    }
+
+    #container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    t{
+      color: red;
+    }
+    input{
+      width: 220px;
+    }
+    #enroll td{
+      width: 400px;
+    }
+
+    #enroll th{
+      width: 20vw;
+    }
+    </style>
+
+</head>
+
+<body onload="displayGuestbook();">
+  <div id="container">
+
+    <header>
+      <h1>Create an Account</h1>
+    </header>
+
+    <section>
+      <form action="javascript:alert('제출성공');" name="memberFrm">
+        <table id="enroll">
+            <tr>
+                <th>아이디<span class="req">*</span></th>
+                <td>
+                    <input type="text" name="userId" id="userId" placeholder="8 ~ 12자리 사이로 입력하세요" >
+                    <t></t>
+                </td>
+                
+            </tr>
+            <tr>
+                <th>비밀번호<span class="req">*</span></th>
+                <td>
+                    <input type="password" name="pwd" id="pwd" placeholder="영문 대소문자와 숫자를 반드시 포함" >
+                    <t></t>
+                </td>
+            </tr>
+            <tr>
+                <th>비밀번호확인</th>
+                <td>
+                    <input type="password" id="pwdCheck">
+                    <t></t>
+                </td>
+            </tr>
+            <tr>
+                <th>이름<span class="req">*</span></th>
+                <td>
+                    <input type="text" name="userName" id="userName" > 
+                    <t></t>
+                </td>
+            </tr>
+            <tr>
+                <th>주민번호<span class="req">*</span></th>
+                <td>
+                    <input type="text" name="ssn1" id="ssn1" class="short" >-
+                    <input type="password" name="ssn2" id="ssn2" class="short" >
+                    <t></t>
+                </td>
+            </tr>
+            <tr>
+                <th>이메일<span class="req">*</span></th>
+                <td>
+                    <input type="email" name="email" id="email" placeholder="영문자/숫자 4~12자리와 @를 붙여서 적어주세요" >
+                    <t></t>
+                </td>
+            </tr>
+            <tr>
+                <th>전화번호<span class="req">*</span></th>
+                <td>
+                    <input type="text" name="tel1" id="tel1" class="phone" >-
+                    <input type="text" name="tel2" id="tel2" class="phone" >-
+                    <input type="text" name="tel3" id="tel3" class="phone" >
+                    <t></t>
+                </td>
+            </tr>
+            
+            <tr>
+                <td colspan="2" class="btn-wrapper">
+                    <input type="submit" value="확인">&nbsp;
+                </td>
+            </tr>
+        </table>
+    </form>
+      
+    </section>
+    
+  
+</div>
+
+
+
+  <script>
+
+
+  // 회원가입 폼관련----------------------------------------------
+    
+  $(userId).change(e=>{
+    console.log( $(e.target).parent().next());
+    if(!/^.{8,12}$/.test(e.target.value)){
+      $(e.target).next().html("아이디는 8 ~ 12자리로 해주세요");
+    }
+    else{
+      $(e.target).next().html("");
+    }
+  });
+
+  $(pwd).change(e=>{
+    if(!/[a-zA-Z]/.test(e.target.value) || !/\d/.test(e.target.value)){
+      $("#pwd").next().html("영문 대소문자와 숫자를 반드시 포함");
+    }
+    else{
+      $("#pwd").next().html("");
+    }
+
+  });
+
+  $(pwdCheck).change(e=>{
+    if(pwd.value != pwdCheck.value){
+      $("#pwdCheck").next().html("비밀번호를 확인하세요.");
+      pwdCheck.value = "";
+    }
+    else{
+      $("#pwdCheck").next().html("");
+    }
+  });
+  $(userName).change(e=>{
+    if(!/^.{2,6}$/.test(e.target.value)){
+      $("#userName").next().html("이름을 확인하세요.");
+    }
+    else{
+      $("#userName").next().html("");
+    }
+  });
+
+  $("#ssn1,#ssn2").change(e=>{
+    if(!/[0-9]{6}/.test(ssn1.value) || !/[0-9]{7}/.test(ssn2.value)){
+      $("#ssn2").next().html("주민번호를 확인하세요");
+    }
+    else{
+      $("#ssn2").next().html("");
+    }
+  });
+
+  $(email).change(e=>{
+    if(!/[a-zA-z0-9]{4,12}@/.test(email.value)){
+      $("#email").next().html("영문자/숫자 4~12자리와 @를 붙여서 적어주세요");
+    }
+    else{
+      $("#email").next().html("");
+    }
+  });
+  $("#tel1,#tel2,#tel3").change(e=>{
+    if(!/^.{3,3}$/.test(tel1.value) || !/^.{4,4}$/.test(tel2.value) || !/^.{4,4}$/.test(tel3.value)){
+      $(tel3).next().html("전화번호를 확인해주세요.");
+      return false;
+    }
+    else{
+      $(tel3).next().html("");
+    }
+
+  })
+  
+
+  
+
+  </script>
+
+
+
+
+
+
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

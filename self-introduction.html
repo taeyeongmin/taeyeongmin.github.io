@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>self-introduction</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/f55f9c832b.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+
+
+    <style>
+        *{margin: 0; padding: 0;}
+        /* header{width: 100%; text-align: center; height: 50px; position:fixed; } */
+        /* p{display: inline-block; margin-left: 50px; padding-top: 15px; cursor: pointer;} */
+        .windows{width: 100vw; height: 100vh;}
+        
+        #window1{
+            background-color: #eee;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 2px solid gray;
+        }
+        #links {
+            display: flex;
+            flex-direction: row;
+            position: fixed;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            margin-left: 35vw;
+            z-index: 2;
+        }
+        /* li 관련 */
+        .link{
+            margin: 13px;
+            opacity: 0.7;
+        }
+        .link:hover{
+            cursor: pointer;
+            /* box-shadow: 2px 2px 6px 2px rgb(199, 189, 189); */
+            opacity: 1;
+        }
+        #window1 ul>p{
+            padding-top: 10px;
+            margin-right: 10px;
+            opacity: 0.8;
+            padding: 0;
+        }
+        #window1 section{
+            overflow: hidden;
+            padding-left: 50px;
+            padding-right: 50px;
+            margin-bottom: 250px;
+        }
+        #window1 section h1{
+            font-size: 30px;
+            transform: translateX(-500px);
+            text-align: center;
+            margin-bottom: 35px;
+            opacity: 0.1;
+        }
+        #window1 section h4{
+            font-size: 20px;
+            transform: translateX(500px);
+            text-align: center;
+            opacity: 0.3;
+            color: gray;
+        }
+        /* 아이콘 */
+        .fa-user:before {
+            content: "\f007";
+            margin: 50px;
+        }
+
+        .fa-cat:before {
+           content: "\f6be";
+           margin: 50px;
+        }
+
+        .fa-video:before {
+            content: "\f03d";
+            margin: 50px;
+        }
+
+        .fa-plane-departure:before {
+            margin: 50px;
+        }
+        
+    
+        footer{
+            opacity: 0.1;
+        }
+        
+        
+        /*-----------------------------  */
+        #window2{
+            background-color: #eee;
+            color: black;
+            display: flex;
+            border-bottom: 2px solid gray;
+        }
+        
+        #im {
+            width: 560px;
+        }
+
+        #window2 section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #window2 article:nth-child(1){
+            margin-left:5vw;
+        }
+
+        #window2 article:nth-child(2){
+            margin-left: 130px;
+            width: 40vw;
+            height: 75vh;
+        }
+        #window2 article h1 {
+            color: cornflowerblue;
+            font-size:2.5rem;
+            margin-bottom: 30px;
+        }
+        #window2 article h1:hover{
+            cursor: pointer;
+            text-shadow: 7px 6px 8px;
+        }
+
+        #window2 article p {
+            font-size:1.25rem;
+        }
+        footer:hover{
+            cursor: pointer;
+        }
+
+        /*----------------------------------------- */
+         
+        #window3{         
+            background-color: #eee;
+            border-bottom: 2px solid gray;
+            opacity: 0.9;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+        }
+  
+        #window3 ul{
+            width: 700px;
+        }
+        #window3 ul li{
+            list-style: none;
+        }
+        .bxslider img{
+            width: 100vw;
+            height: 100vh;
+        }
+        .bxslider div{
+            color: white;
+            position: absolute;
+            left: 150px;
+            top: 150px;
+        }
+        .bxslider div h1{
+            margin: 20px;
+            text-shadow: 3px 3px 4px black;
+        }
+        .bxslider div h1:first-child{
+            font-size: 3rem
+        }
+
+
+
+       /* -------------------------- */
+
+       #window4{
+            background-image: url("./cat/cat2.jpg");
+            display: flex;
+            flex-direction: column;
+            justify-content:space-evenly;
+        }
+        #window4 header{
+
+            opacity: 0.8;
+            text-shadow: 2px 2px 2px gray;
+            color:black;
+            height: 20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #window4 section {
+            width: 35vw;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+        #window4 section article{
+            display: flex;
+            flex-direction: column;
+            height: 100vw;
+            justify-content: center;
+            transform: translateX(-400px);
+        }
+
+        #window4 section article h2 {
+            margin: 30px 5px 30px 60px;
+            text-shadow: 2px 2px 2px silver;
+        }
+
+        /* ---------------------------- */
+
+        #window5 {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        #window5 header {
+
+            background-color: lightblue;
+            text-shadow: 2px 2px 2px gray;
+            color:white;
+            padding-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+        #window5 header h1{
+            margin-top: 50px;
+            font-size: 2rem;
+        }
+
+        #window5 mid{
+        
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+        } 
+
+        #window5 mid section {
+            width: 40vw;
+            flex-grow: 1;
+            background-color: lightblue;
+        }
+
+        #window5 mid section img{
+            width: 65vw;
+            height: 45vw;
+        }
+
+        #window5 mid nav{
+            width: 20vw;
+            background-color: lightblue;
+            color:white;
+            text-shadow: 2px 2px 2px gray;
+            flex-grow: 0.5;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-evenly;
+            font-size: 1.45rem;
+        }
+        #window5 #local1{
+            transform: translateX(-400px);
+        }   
+        #window5 #local2{
+            transform: translateX(-400px);
+        }
+        #window5 #local3{
+            transform: translateX(-400px);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    
+    <header>
+        <ul id="links">
+            <p class="link">change page</p>
+            <li id="h1" class="link">1</li>
+            <li id="h2" class="link">2</li>
+            <li id="h3" class="link">3</li>
+            <li id="h4" class="link">4</li>
+            <li id="h5" class="link">5</li>
+        </ul>
+    </header>
+        <div id ="window1" class="windows">
+            <section>
+                <h1>ㅎㅇ</h1>
+                <h1 class="head">다들 반갑습니다.저에 대해 소개합니다.</h1>
+                <h4 class="head">스크롤을 내려 다양한 정보를 확인해보세요.</h4>
+            </section>
+
+            <footer>
+                <i class="far fa-user fa-3x"  class="icon" id="user" ></i>
+                <i class="fas fa-video fa-3x" class="icon" id="video"></i>
+                <i class="fas fa-cat fa-3x" class="icon" id="cat"></i>
+                <i class="fas fa-plane-departure fa-3x" id="travel"></i>
+            </footer>
+        
+        </div>
+        <!-------------------------------------------->
+
+        <div id ="window2" class="windows">
+            <section>
+                <article>
+                    <img src="./background/태영2.jpg" alt="" id="im">
+                </article>
+                <article>
+                    <h1 id="me">ABOUT ME</h1>
+                    <p class="introduction">안녕하세요 저는 올해 26살이 된 민태영이라고 합니다.</p><br>
+                    <p class="introduction">저는 조선해양과를 전공하여 선박설계를 하려는 목표를 가지고 있었습니다</p><br>
+                    <p class="introduction">그런데 갑작스런 조선업계의 큰 불황이 불어와</p><br>
+                    <p class="introduction">육상 플랜트 설계를 하는 회사에 취업을 한 뒤 여러가지 이유로 업종 변경을 고민 하던 중 </p><br>
+                    <p class="introduction">IT 업계에 흥미를 가지게 되어 개발자라는 새로운 목표를 가지게 되어 지금 여러분과 수업을 듣게 되었습니다.</p><br>
+                    <p class="introduction">아직 정확히 어느 분야로 갈지는 잘 모르겠으나</p><br>
+                    <p class="introduction">이번 과제를 하면서 다시 한번 저에겐 디자인 감각이 부족하다고 느꼈습니다</p><br>
+                    <p class="introduction">그러하여 front쪽 보다는 back쪽에 집중해 서버 관련된 업무를 할 수 있도록 노력중입니다!</p><br>                    
+                </article>
+            </section>
+        </div>
+
+        <div id ="window3" class="windows">      
+            <ul class="bxslider">
+                <li>
+                    <div>
+                        <h1>My best movie.</h1>
+                        <h1>AboutTime.</h1>
+                    </div>
+                    
+                    <img src="./movieimg/어바웃타임5.jpg" alt="">
+                </li>
+
+                <li><img src="./movieimg/어바웃타임6.jpg" alt=""></li>
+                <li><img src="./movieimg/어바웃타임7.jpg" alt=""></li>
+            </ul>
+            
+        </div>
+
+
+        <div id ="window4" class="windows">
+            <header>
+                <h1>저의 반려묘인 단지입니다.</h1>
+            </header>
+            <section>
+                <article>
+                    <h2>이름 : 단지</h2>
+                    <h2>성별 : 암컷이였던 중성..</h2>
+                    <h2>나이 : 8세</h2>
+                    <h2>좋아하는 간식 : 참치 통조림</h2>
+                </article>
+            </section>
+        </div>
+
+
+        <div id ="window5" class="windows">   
+            <header>
+                <h1>2021년 다녀온 여행지</h1>
+            </header>
+
+            <mid>
+                <nav>
+                    <h1 id="local1">순천</h1>
+                    <h1 id="local2">여수</h1>
+                    <h1 id="local3">남해</h1>
+                </nav>
+                <section>
+                    <ul class="bxslider">
+                        <li>
+                            <img src="./img_travel/KakaoTalk_20210919_232843944.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./img_travel/KakaoTalk_20210919_232844714.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./img_travel/KakaoTalk_20210919_232846606.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./img_travel/KakaoTalk_20210919_232847460.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./img_travel/KakaoTalk_20210919_232848887.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="./img_travel/KakaoTalk_20210919_232852948.jpg" alt="">
+                        </li>
+                    </ul>
+                </section>
+                
+            </mid>
+
+        </div>
+        
+
+<script>
+
+
+    $("#h1").click(e=>{
+        $('html, body').animate({scrollTop:'0'},680);
+    });
+    $("#h2, #user").click(e=>{
+        var position = $("#window2").offset();
+        $('html, body').stop().animate({scrollTop:position.top},680);
+    });
+    $("#h3, #cat").click(e=>{
+        var position = $("#window3").offset();
+        $('html, body').stop().animate({scrollTop:position.top},680);
+    });
+    $("#h4, #video").click(e=>{
+        var position = $("#window4").offset();
+        $('html, body').stop().animate({scrollTop:position.top},680);
+    });
+    $("#h5, #travel").click(e=>{
+        var position = $("#window5").offset();
+        $('html, body').stop().animate({scrollTop:position.top},680);
+    });
+    
+    $(window1).ready(e=>{
+        $("h1.head")
+            .css("transform", "translateX(0)")
+            .css("transition", "1.5s")
+            .css("opacity","1")
+
+        $("h4.head")
+            .css("transform", "translateX(0)")
+            .css("transition", "1.6s")
+            .css("transition-delay","0.4s")
+            .css("opacity","1") 
+            
+        $(".introduction").slideUp(0);
+    });
+    
+    $("#me").click(e=>{
+        $(".introduction").slideToggle(1000);
+    });
+
+ 
+    $(document).ready(e=>{
+        $('.bxslider').bxSlider({
+            captions: true,
+            auto:true,
+            speed:1000,
+            pause:4000
+            
+        });
+
+        $('#window1 footer')
+            .css("opacity","1")
+            .css("transition", "5s")
+    });
+    $("#window4 section").hover(
+        e=>{
+            // translateX
+            $("#window4 article")
+                .css("transform", "translateX(0)")
+                .css("transition", "1.5s")
+        },
+        e=>{
+            // translateX
+            $("#window4 article")
+                .css("transform", "translateX(-400px)")
+                .css("transition", "1.5s")
+        }
+
+
+    );
+    $('#window5 nav').hover(e=>{
+        $(local1)
+            .css("transform","translateX(0)")
+            .css("transition","1.5s")
+        $(local2)
+            .css("transform","translateX(0)")
+            .css("transition","1.8s")
+            .css("transition-delay","0.1s")
+        $(local3)
+            .css("transform","translateX(0)")
+            .css("transition","2.1s")
+            .css("transition-delay","0.2s")
+
+    })
+
+
+    
+
+
+    
+ 
+
+
+
+</script>
+
+</body>
+</html>

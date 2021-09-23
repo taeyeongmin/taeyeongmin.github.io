@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>roadmap</title>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/f55f9c832b.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+
+    <style>
+        #container{
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+        }
+        header{
+            margin-bottom: 10vh;    
+        } 
+
+        header h1{
+            color: rgb(116, 133, 212);
+            font-weight: 300;
+            margin-top: 10vh;
+            font-size: 3rem;
+            margin-left: 13vw;
+        }
+
+        section article{
+            position: relative;
+            height: 100px;
+            /* border: 3px solid red; */
+            
+        }
+        section article:nth-child(2){
+            height: 50vh;
+            display: flex;
+            
+        }
+
+        #line{
+            background-color: rgb(155, 155, 209);
+            display: flex;
+            position:relative;
+            top: 15px;
+            justify-content: space-evenly;
+            height: 15px;
+        }
+        .fa-circle{
+            top: 1px;
+            position: absolute;     
+        }
+        .fa-circle:before {
+            content: "\f111";
+            margin-left: 6vw;
+        }
+        .fa-circle:nth-child(1){margin-left: 5vw;}
+        .fas:nth-child(2){left: 20vw;}
+        .fas:nth-child(3){left: 40vw;}
+        .fas:nth-child(4){left: 60vw;}
+        .fas:nth-child(5){left: 80vw;}
+
+        .fab,.fas{
+            color: rgb(6, 6, 134);
+        }
+        ul{  
+            padding-left:1.5vw;
+        }
+        ul>li{
+            margin-top: 4vh;
+            font-size: 1rem;
+        }
+        .list{
+            margin-right: 7vw;
+        }
+        .list:nth-child(2){
+            margin-right: 11vw;
+        }
+        .list:nth-child(3){
+            margin-right: 11vw;
+        }
+        .list:nth-child(4){
+            margin-right: 8vw;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <header>
+            <h1>TaeYeong's Roadmap</h1>
+        </header>
+        
+        <section>
+            <article>
+                <div id="line">
+                </div>
+                <i class="fas fa-circle fa-3x"></i>
+                <i class="fas fa-circle fa-3x"></i>
+                <i class="fas fa-circle fa-3x"></i>
+                <i class="fas fa-circle fa-3x"></i>
+                <i class="fas fa-circle fa-3x"></i>
+            </article>
+            <article>
+                <div id="java" class="list">
+                    <i class="fab fa-java fa-4x"></i><br>
+                    <h2>Java</h2>
+                    <ul>
+                        <li>java를 통해 기본 프로그래밍 학습</li>
+                        <li>네트워크 프로그래밍 구현</li>
+                    </ul>
+                </div>
+
+                <div id="oracle" class="list">
+                    <i class="fas fa-database fa-4x"></i><br>
+                    <h2>DB</h2>
+                    <ul>
+                        <li>데이터베이스 구현</li>
+                        <li>SQL활용</li>
+                        <li>SQL응용</li>
+                    </ul>
+                </div>
+
+                <div id="oracle" class="list">
+                    <i class="fab fa-html5 fa-4x"></i><br>
+                    <h2>HTML/CSS/JS</h2>
+                    <ul>
+                        <li>UI 디자인</li>
+                        <li>UI 구현</li>
+                    </ul>
+                </div>
+
+                <div id="oracle" class="list">
+                    <i class="fas fa-server fa-4x"></i><br>
+                    <h2>servlet/jsp</h2>
+                    <ul>
+                        <li>요구사항 확인</li>
+                        <li>서버프로그램 구현</li>
+                        <li>애플리케이션 설계</li>
+                    </ul>
+                </div>
+
+                <div id="oracle" class="list">
+                    <i class="fas fa-server fa-4x"></i><br>
+                    <h2>springframework</h2>
+                    <ul>
+                        <li>요구사항 확인</li>
+                        <li>화면 설계</li>
+                        <li>통합 구현</li>
+                    </ul>
+                </div>
+
+            </article> 
+            
+        </section>
+        
+    </div>
+</body>
+</html>

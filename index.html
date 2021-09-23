@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=D, initial-scale=1.0">
+    <title>index.html</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="https://kit.fontawesome.com/f55f9c832b.js" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+            background-color: black;
+        }
+
+        nav{
+           display: flex;
+        }
+
+        #content{
+            height: 555px;
+        }
+
+        header{
+            color: black;
+            text-align: center;
+            min-width: 550px;
+        }
+
+        h1{
+            margin-top: 50px;
+            font-size: 2.5em;
+        }
+
+        /* 링크  */
+        nav>ul>li a{
+           color: white;
+           text-decoration-line: none;
+        }
+
+        /* 지문이미지 */
+        img{
+            width: 150px;
+            height: 150px;  
+        }
+        
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        #content{
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            justify-content: center;
+            flex-grow: 1;
+            min-width: 550px;
+            
+        }
+        nav{
+            right: 200px;
+            /* border: 1px solid red; */
+            flex-grow: 0.5;
+            /* overflow: hidden; */
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* border: 1px solid red; */
+            flex-grow: 1.5;
+        }
+        #links li{  
+          height: 100px;
+          font-size: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          
+        }
+        .link{
+            width: 350px;
+            /* border: 1px solid yellow; */
+            transform: translateX(-350px);
+            padding-left: 50px;
+        }
+   
+        a{
+            padding: 5px;
+            padding-left: 10px;
+        }
+        
+    </style>
+   
+    
+</head>
+<body>
+    <p>text</p>
+    <i class="fab fa-instagram"></i>
+    <div id="contain">
+        <header>
+            <h1>.</h1>
+        </header>
+        
+        <div id="content">
+            <nav>
+                <ul id="links">
+                    <li class="link"><a href="self-introduction.html">self-introduction</a> </li>
+                    <li class="link"><a href="roadmap page.html"> roadmap page</a></li>
+                    <li class="link"><a href="join membership.html">join membership</a></li>
+                </ul>
+            </nav>
+            <section>
+                <img id="im" src="./background/지문222.jpg" alt="">
+            </section>
+        </div>
+
+    </div>
+
+        <script>
+            $("#im").hover(
+
+            e=>{
+                $(".link:eq(0)")
+                .css("transform","translateX(280px)")
+                .css("transition","1.3s");
+
+                $(".link:eq(1)")
+                .css("transform","translateX(280px)")
+                .css("transition","1.6s");
+
+                $(".link:eq(2)")
+                .css("transform","translateX(280px)")
+                .css("transition","1.9s");
+
+                $(im)
+                    .css("opacity", "0");
+            },
+            e=>{
+                $(im)
+                    // .css("opacity", "1")
+                    .css("transition","1s")
+
+                $(".link")
+                    .css("transform","translateX(-360px)")
+                    .css("transition","1s")
+                    .css("transition-delay",".5s")
+                    .css("transition","1s")
+            }
+        );
+          $(links).hover(
+              
+            e=>{
+                $(".link")
+                    .css("transform","translateX(280px)")
+            },
+            e=>{
+                $(".link")
+                    .css("transform","translateX(-360px)")
+                    .css("transition","1s");
+                $(im)
+                    .css("opacity", "1")
+                    .css("transition","1s")
+            }
+        );
+        
+        $("a").hover(
+
+            e=>{
+                $(e.target).css("box-shadow","5px 4px 18px 4px #cccc");
+            },
+            e=>{
+                $(e.target).css("box-shadow","");
+            }
+        );
+        
+        // box-shadow: 5px 5px 10px px gray
+      
+
+   
+            
+        </script>
+</body>
+</html>
