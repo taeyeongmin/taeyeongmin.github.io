@@ -8138,7 +8138,7 @@ body {
   font-size: 16px;
   line-height: 1.8;
   font-weight: 400;
-  color: #999999; }
+  }
   body.menu-show {
     overflow: hidden;
     position: fixed;
@@ -8634,7 +8634,8 @@ h1, h2, h3, h4, h5,
   position: relative; }
   .ftco-about .img-about .img {
     display: block;
-    width: 100%;
+    width: 50%;
+    height: 65%;
     position: relative;
     z-index: 1; }
 
@@ -9672,3 +9673,13 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+body.no-hero {
+  padding-top: 90px;
+}
+
+@media (max-width: 767.98px) {
+  body.no-hero {
+    padding-top: 70px;
+  }
+}
