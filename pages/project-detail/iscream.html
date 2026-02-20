@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 
 <head>
@@ -8,7 +8,6 @@
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-  <!-- ✅ 상세 페이지 경로: /pages/project-detail/ 이므로 ../../ 로 올라감 -->
   <link rel="stylesheet" href="../../css/open-iconic-bootstrap.min.css">
   <link rel="stylesheet" href="../../css/animate.css">
   <link rel="stylesheet" href="../../css/owl.carousel.min.css">
@@ -21,40 +20,46 @@
   <link rel="stylesheet" href="../../css/style.css">
 
   <style>
-    :root{
-      --accent:#F96D00;
-      --accent-weak: rgba(249,109,0,.10);
-      --ink:#111;
-      --muted: rgba(0,0,0,.85);
-      --line: rgba(0,0,0,.08);
-      --card-shadow: 0 10px 28px rgba(0,0,0,.08);
+    :root {
+      --accent: #F96D00;
+      --accent-weak: rgba(249, 109, 0, .10);
+      --ink: #111;
+      --muted: rgba(0, 0, 0, .85);
+      --line: rgba(0, 0, 0, .08);
+      --card-shadow: 0 10px 28px rgba(0, 0, 0, .08);
     }
 
     /* navbar가 없는 페이지이므로 상단 여백만 안정적으로 확보 */
-    body { padding-top: 48px; }
+    body {
+      padding-top: 48px;
+    }
 
     /* 헤더 */
-    .detail-hero{
+    .detail-hero {
       padding: 36px 0 18px;
     }
-    .detail-kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
+
+    .detail-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       font-size: 12.5px;
       color: var(--muted);
       border: 1px solid var(--line);
-      background: rgba(0,0,0,.02);
+      background: rgba(0, 0, 0, .02);
       padding: 6px 10px;
       border-radius: 999px;
     }
-    .detail-kicker .dot{
-      width:8px;height:8px;border-radius:50%;
+
+    .detail-kicker .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
       background: var(--accent);
       box-shadow: 0 0 0 3px var(--accent-weak);
     }
 
-    .detail-title{
+    .detail-title {
       margin: 14px 0 10px;
       font-size: clamp(28px, 3vw, 40px);
       font-weight: 800;
@@ -62,7 +67,8 @@
       letter-spacing: -0.5px;
       line-height: 1.2;
     }
-    .detail-sub{
+
+    .detail-sub {
       margin: 0;
       color: var(--muted);
       font-size: 15px;
@@ -71,13 +77,14 @@
     }
 
     /* 상단 요약 카드 */
-    .summary-grid{
-      display:grid;
+    .summary-grid {
+      display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 14px;
       margin-top: 18px;
     }
-    .summary-card{
+
+    .summary-card {
       grid-column: span 6;
       background: #fff;
       border: 1px solid var(--line);
@@ -85,14 +92,16 @@
       box-shadow: var(--card-shadow);
       padding: 16px 16px 14px;
     }
-    .summary-card h4{
+
+    .summary-card h4 {
       margin: 0 0 10px;
       font-size: 14px;
       font-weight: 700;
       color: var(--ink);
     }
-    .summary-card ul{
-      margin:0;
+
+    .summary-card ul {
+      margin: 0;
       padding-left: 18px;
       color: var(--muted);
       font-size: 13.5px;
@@ -100,22 +109,25 @@
     }
 
     /* 섹션 */
-    .detail-section{
+    .detail-section {
       padding: 44px 0;
     }
-    .detail-section.bg-soft{
+
+    .detail-section.bg-soft {
       background: #fafafa;
-      border-top: 1px solid rgba(0,0,0,.03);
-      border-bottom: 1px solid rgba(0,0,0,.03);
+      border-top: 1px solid rgba(0, 0, 0, .03);
+      border-bottom: 1px solid rgba(0, 0, 0, .03);
     }
-    .section-title{
+
+    .section-title {
       margin: 0 0 14px;
       font-size: 20px;
       font-weight: 800;
       letter-spacing: -0.2px;
       color: var(--ink);
     }
-    .section-desc{
+
+    .section-desc {
       margin: 0 0 18px;
       color: var(--muted);
       line-height: 1.8;
@@ -124,121 +136,147 @@
     }
 
     /* 케이스 스터디 카드 */
-    .case{
+    .case {
       border: 1px solid var(--line);
-      background:#fff;
+      background: #fff;
       border-radius: 14px;
       box-shadow: var(--card-shadow);
       padding: 18px;
       margin-top: 14px;
     }
-    .case-head{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:12px;
+
+    .case-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
       margin-bottom: 10px;
     }
-    .case-title{
-      margin:0;
+
+    .case-title {
+      margin: 0;
       font-size: 16px;
       font-weight: 800;
       color: var(--ink);
       letter-spacing: -0.2px;
       line-height: 1.35;
     }
-    .case-badge{
+
+    .case-badge {
       flex: 0 0 auto;
       font-size: 12px;
       font-weight: 700;
-      color: rgba(0,0,0,.72);
+      color: rgba(0, 0, 0, .72);
       border: 1px solid var(--line);
-      background: rgba(0,0,0,.02);
+      background: rgba(0, 0, 0, .02);
       padding: 6px 10px;
       border-radius: 999px;
       white-space: nowrap;
     }
 
-    .case-grid{
-      display:grid;
+    .case-grid {
+      display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 12px;
       margin-top: 10px;
     }
-    .case-item{
+
+    .case-item {
       grid-column: span 4;
-      border: 1px solid rgba(0,0,0,.06);
-      background: rgba(0,0,0,.015);
+      border: 1px solid rgba(0, 0, 0, .06);
+      background: rgba(0, 0, 0, .015);
       border-radius: 12px;
       padding: 12px 12px 10px;
     }
-    .case-item h5{
-      margin:0 0 6px;
+
+    .case-item h5 {
+      margin: 0 0 6px;
       font-size: 12.5px;
       font-weight: 800;
-      color: rgba(0,0,0,.82);
+      color: rgba(0, 0, 0, .82);
     }
-    .case-item p{
-      margin:0;
+
+    .case-item p {
+      margin: 0;
       color: var(--muted);
       font-size: 13.5px;
       line-height: 1.65;
     }
 
-    .metric{
+    .metric {
       margin-top: 12px;
       padding: 12px 12px;
       border-radius: 12px;
-      border: 1px solid rgba(249,109,0,.22);
+      border: 1px solid rgba(249, 109, 0, .22);
       background: var(--accent-weak);
-      color: rgba(0,0,0,.78);
+      color: rgba(0, 0, 0, .78);
       font-size: 13.5px;
       line-height: 1.65;
     }
-    .metric strong{ color: rgba(0,0,0,.92); }
-    .metric .accent{ color: var(--accent); font-weight: 800; }
+
+    .metric strong {
+      color: rgba(0, 0, 0, .92);
+    }
+
+    .metric .accent {
+      color: var(--accent);
+      font-weight: 800;
+    }
 
     /* TOC */
-    .toc{
+    .toc {
       border: 1px solid var(--line);
       border-radius: 14px;
       padding: 14px 16px;
       background: #fff;
       box-shadow: var(--card-shadow);
     }
-    .toc h4{
+
+    .toc h4 {
       margin: 0 0 10px;
       font-size: 14px;
       font-weight: 800;
       color: var(--ink);
     }
-    .toc a{
-      display:block;
+
+    .toc a {
+      display: block;
       padding: 8px 0;
-      color: rgba(0,0,0,.72);
-      border-top: 1px dashed rgba(0,0,0,.10);
-      text-decoration:none;
+      color: rgba(0, 0, 0, .72);
+      border-top: 1px dashed rgba(0, 0, 0, .10);
+      text-decoration: none;
       font-size: 13.5px;
     }
-    .toc a:first-of-type{ border-top: 0; }
-    .toc a:hover{ color: var(--accent); }
+
+    .toc a:first-of-type {
+      border-top: 0;
+    }
+
+    .toc a:hover {
+      color: var(--accent);
+    }
 
     /* 하단 버튼 */
-    .detail-actions{
+    .detail-actions {
       margin-top: 28px;
-      display:flex;
+      display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      align-items:center;
-      justify-content:space-between;
-      border-top: 1px solid rgba(0,0,0,.06);
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(0, 0, 0, .06);
       padding-top: 18px;
     }
 
     /* 반응형 */
-    @media (max-width: 992px){
-      .summary-card{ grid-column: span 12; }
-      .case-item{ grid-column: span 12; }
+    @media (max-width: 992px) {
+      .summary-card {
+        grid-column: span 12;
+      }
+
+      .case-item {
+        grid-column: span 12;
+      }
     }
   </style>
 </head>
@@ -252,7 +290,7 @@
       <h1 class="detail-title">아이스크림 몰 사이트 재구축</h1>
       <p class="detail-sub">
         플래티어(이커머스 솔루션) 기반의 MSA 환경에서 고객사 요구사항에 맞춘 기능 확장·정책 정비를 수행했습니다.
-        저는 <strong>장바구니·주문·배송 API</strong>를 담당하여 구매 플로우의 안정성과 확장성을 강화하는 데 집중했습니다.    
+        저는 <strong>장바구니·주문·배송 API</strong>를 담당하여 구매 플로우의 안정성과 확장성을 강화하는 데 집중했습니다.
       </p>
 
       <div class="row mt-4">
@@ -264,7 +302,7 @@
                 <li>상품 타입 확장(추가 입력/추가 구성) 정책을 장바구니·주문 구조에 반영</li>
                 <li>주문 변경 가능 범위/조건(단품 옵션, 동일 가격 등) 기준 정리 및 API 반영</li>
                 <li>합배송(아이스크림 물류센터 경유) 프로세스에 맞춘 배송 상태/흐름 수정</li>
-                <li>장바구니 성능 저하 구간 분석 후 병목 제거(조회/저장 흐름 개선)</li>                
+                <li>장바구니 성능 저하 구간 분석 후 병목 제거(조회/저장 흐름 개선)</li>
               </ul>
             </div>
 
@@ -274,7 +312,7 @@
                 <li>장바구니 도메인 API 개발</li>
                 <li>주문 도메인 API 개발(FO,BO)</li>
                 <li>기존(플래티어 제공) 주문 전략 패턴 구조를 이해하고 장바구니에 확장 적용</li>
-                <li>정책 문서 기반으로 예외 케이스(옵션/가격/상태) 표준화 및 검증 로직 반영</li>                
+                <li>정책 문서 기반으로 예외 케이스(옵션/가격/상태) 표준화 및 검증 로직 반영</li>
                 <li>타 도메인(상품/혜택/정산/입점사 등)과 연동 포인트 정리 및 협업</li>
               </ul>
             </div>
@@ -290,7 +328,7 @@
           </div>
         </div>
       </div>
-      
+
     </div>
   </section>
 
@@ -302,7 +340,7 @@
         본 프로젝트는 처음부터 모든 것을 새로 만드는 구축이라기보다
         <strong>플래티어에서 제공하는 이커머스 기본 기능(프레임/정책/확장 포인트)</strong>을 기반으로
         고객사의 요구사항에 맞춰 <strong>정책을 재정의하고 기능을 수정/확장</strong>하는 형태였습니다.
-        또한 서비스가 <strong>MSA로 분리</strong>되어 있어 장애/이슈 발생 시 단일 서버처럼 한 번에 추적하기 어렵다는 특성이 있었습니다.        
+        또한 서비스가 <strong>MSA로 분리</strong>되어 있어 장애/이슈 발생 시 단일 서버처럼 한 번에 추적하기 어렵다는 특성이 있었습니다.
       </p>
 
       <div class="row">
@@ -314,7 +352,7 @@
             </div>
             <ul class="mb-0" style="padding-left:18px; color: rgba(0,0,0,.65); line-height:1.8;">
               <li>프로젝트의 골격과 DB 스키마는 솔루션이 제공하며 새로운 요구에 맞춰 커스터마이징 및 추가</li>
-              <li>객체지향 특성을 극대화환 구조 및 설계</li>                            
+              <li>객체지향 특성을 극대화환 구조 및 설계</li>
               <li>한 번의 로직 흐름이 여러 서비스/DB를 거치므로 트러블슈팅 난이도가 높음</li>
             </ul>
           </div>
@@ -323,11 +361,11 @@
         <div class="col-lg-6 mt-4 mt-lg-0">
           <div class="case">
             <div class="case-head">
-              <h3 class="case-title">나의 구현 목표</h3>              
+              <h3 class="case-title">나의 구현 목표</h3>
             </div>
             <ul class="mb-0" style="padding-left:18px; color: rgba(0,0,0,.65); line-height:1.8;">
-              <li>주문 → 재고 차감 → 포인트 적립 → ....  → 결제 → 후처리까지 이어지는 전체 흐름이
-                    정합성과 일관성을 유지하도록 구현</li>
+              <li>주문 → 재고 차감 → 포인트 적립 → .... → 결제 → 후처리까지 이어지는 전체 흐름이
+                정합성과 일관성을 유지하도록 구현</li>
               <li>장바구니/주문 구조를 “상품 타입 확장”에 견딜 수 있게 확장</li>
               <li>주문 변경/배송 상태 흐름을 정책 문서 기준으로 표준화</li>
               <li>운영 이슈 대응을 위해 “원인 좁히기”가 가능한 단서(식별자/로그)를 강화</li>
@@ -347,7 +385,7 @@
       <!-- Case 0: 역할/협업 -->
       <div class="case">
         <div class="case-head">
-          <h3 class="case-title">솔루션 기반 커스터마이징: 기존 구조를 이해하고 안전하게 확장하기</h3>          
+          <h3 class="case-title">솔루션 기반 커스터마이징: 기존 구조를 이해하고 안전하게 확장하기</h3>
         </div>
 
         <div class="case-grid">
@@ -385,7 +423,7 @@
       <!-- Case 1: 장바구니 - 추가입력/추가구성 정책 -->
       <div class="case">
         <div class="case-head">
-          <h3 class="case-title">상품 타입 확장 대응: 추가 입력/추가 구성 장바구니 정책 반영</h3>          
+          <h3 class="case-title">상품 타입 확장 대응: 추가 입력/추가 구성 장바구니 정책 반영</h3>
         </div>
 
         <div class="case-grid">
@@ -429,7 +467,7 @@
       <!-- Case 2: 주문 정책 - 변경 가능 범위/조건 -->
       <div class="case">
         <div class="case-head">
-          <h3 class="case-title">주문 정책 표준화: 주문 변경 가능 범위/조건을 API로 고정</h3>          
+          <h3 class="case-title">주문 정책 표준화: 주문 변경 가능 범위/조건을 API로 고정</h3>
         </div>
 
         <div class="case-grid">
@@ -468,15 +506,15 @@
           무엇이 가능한지보다 무엇을 <strong>불가능하게 만들지</strong>를 먼저 결정한 경험이었습니다.
         </p>
       </div>
-      
+
       <!-- Case: FO · BO 주문 API 통합 -->
       <div class="case">
         <div class="case-head">
-          <h3 class="case-title">FO · BO 주문 API 통합 설계: 구매부터 운영 처리까지 일관된 상태 흐름 확립</h3>          
+          <h3 class="case-title">FO · BO 주문 API 통합 설계: 구매부터 운영 처리까지 일관된 상태 흐름 확립</h3>
         </div>
 
         <p style="color: rgba(0,0,0,.85); line-height:1.8; margin-bottom:10px;">
-          주문은 단순한 데이터 생성이 아니라 
+          주문은 단순한 데이터 생성이 아니라
           <strong>고객(FO)의 구매 행위와 운영자(BO)의 후처리 행위가 연결된 하나의 라이프사이클</strong>입니다.
           저는 FO 주문 API와 BO 주문 API를 각각 구현하면서도
           두 영역이 동일한 상태 규칙과 정책 위에서 동작하도록 설계하는 데 집중했습니다.
@@ -521,19 +559,19 @@
           <li>FO와 BO가 동일 상태 흐름을 공유하도록 상태 전이 구조 통합</li>
         </ul>
 
-        <div class="metric">          
-          FO와 BO를 분리된 API가 아닌 <span class="accent">하나의 주문 라이프사이클</span> 관점으로 설계함으로써<br>          
+        <div class="metric">
+          FO와 BO를 분리된 API가 아닌 <span class="accent">하나의 주문 라이프사이클</span> 관점으로 설계함으로써<br>
           - 주문 생성 이후 상태 혼선 감소<br>
           - BO 처리 과정에서의 예외 케이스 축소<br>
           - 전략 패턴의 이점을 체감, 주문의 전략이 잘 구성되어 있어 수정 시 용이하였음<br>
           - 정책 변경 시 영향 범위를 명확히 파악 가능한 설계 구조 확보
         </div>
-      </div>    
+      </div>
 
       <!-- Case 4: 장바구니 성능 개선 -->
       <div class="case">
         <div class="case-head">
-          <h3 class="case-title">장바구니 성능 저하 구간 분석 및 병목 제거</h3>          
+          <h3 class="case-title">장바구니 성능 저하 구간 분석 및 병목 제거</h3>
         </div>
 
         <div class="case-grid">
@@ -565,7 +603,7 @@
           정책을 반영한 뒤에도 <strong>실제 조회 패턴</strong>에서 병목이 생기지 않도록 점검하고 개선했습니다.
         </p>
       </div>
-     
+
     </div>
   </section>
 
@@ -575,19 +613,19 @@
       <h2 class="section-title">3. 성장한 점 | 성과와 배운 점</h2>
       <p class="section-desc">
         이번 프로젝트는 기능을 구현했다를 넘어
-        <strong>이커머스 도메인의 이해와 객체 지향 설계의 이점,활용법</strong>을 체득한 경험이었습니다.        
+        <strong>이커머스 도메인의 이해와 객체 지향 설계의 이점,활용법</strong>을 체득한 경험이었습니다.
       </p>
 
       <div class="row">
         <div class="col-lg-6">
           <div class="case">
             <div class="case-head">
-              <h3 class="case-title">성과</h3>              
+              <h3 class="case-title">성과</h3>
             </div>
             <ul class="mb-0" style="padding-left:18px; color: rgba(0,0,0,.65); line-height:1.8;">
               <li>정확성과 일관성이 보장된 주문 기능 구현</li>
               <li>추가 입력/추가 구성 등 상품 타입 확장 요구를 장바구니 규칙으로 안정화</li>
-              <li>주문 변경 가능 조건을 서버 규칙으로 고정하여 운영 리스크를 감소</li>            
+              <li>주문 변경 가능 조건을 서버 규칙으로 고정하여 운영 리스크를 감소</li>
               <li>장바구니 성능 병목을 케이스 단위로 분해하여 체감 지연 구간 개선</li>
             </ul>
           </div>
@@ -596,7 +634,7 @@
         <div class="col-lg-6 mt-4 mt-lg-0">
           <div class="case">
             <div class="case-head">
-              <h3 class="case-title">배운 점</h3>              
+              <h3 class="case-title">배운 점</h3>
             </div>
             <ul class="mb-0" style="padding-left:18px; color: rgba(0,0,0,.65); line-height:1.8;">
               <li>솔루션 기반 개발은 새로 만드는 능력보다 기존 설계를 읽고 확장하는 능력이 중요하다</li>
@@ -613,10 +651,7 @@
           프로젝트 목록으로
         </a>
       </div>
-
-      <p class="mt-3 mb-0" style="color: rgba(0,0,0,.55); font-size: 12.5px; line-height: 1.7;">
-        참고: 노션 정리 문서(정책/플로우) 및 경력기술서 내용을 기반으로 구성 :contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1}
-      </p>
+      
     </div>
   </section>
 

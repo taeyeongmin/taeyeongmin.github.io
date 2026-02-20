@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 
 <head>
@@ -357,13 +357,11 @@
               <h4>프로젝트 정보</h4>
               <p class="meta mb-1"><strong>언어 및 프레임워크</strong> Java, Spring, React, NextJs</p>
               <p class="meta mb-1"><strong>인증</strong> JWT(Bearer),  OAuth2(Kakao)</p>
-              <p class="meta mb-1"><strong>아키텍처</strong> DDD 기반 Layered,  단방향 의존</p>
-              <p class="meta mb-1"><strong>알림</strong> Domain Event, Outbox Pattern(폴링/재시도),  SSE(Registry/Heartbeat)</p>
-              <p class="meta mb-1"><strong>배포</strong> NCP Ubuntu, Nginx Reverse Proxy, HTTPS, systemd</p>
-              <p class="meta mb-0"><strong>문서화</strong> Swagger UI(OpenAPI), ERD</p>
-
-              <div class="tiny-links">
-                <!-- ✅ 실제 링크가 있다면 href만 교체 -->
+              <p class="meta mb-1"><strong>아키텍처</strong> DDD 기반 Layered,  단방향 의존</p>              
+              <p class="meta mb-1"><strong>배포</strong> NCP Ubuntu, Nginx Reverse Proxy</p>
+              <br>
+              <p class="meta mb-0"><strong>문서화</strong> Swagger UI(OpenAPI), ERD</p>              
+              <div class="tiny-links">                
                 <b><a href="https://github.com/taeyeongmin/study_with_be" target="_blank" rel="noopener">GitHub(BE)</a></b>                
                 <b><a href="https://211.188.53.229/swagger-ui/index.html" target="_blank" rel="noopener">Swagger</a></b>
               </div>
@@ -405,8 +403,7 @@
 
       <div class="case">
         <div class="case-head">
-          <h3 class="case-title">그래서 스스로에게 던진 질문</h3>
-          <span class="case-badge">설계에 대한 고민</span>
+          <h3 class="case-title">그래서 스스로에게 던진 질문</h3>          
         </div>
 
         <ul class="mb-0" style="padding-left:18px; color: rgba(0,0,0,.70); line-height:1.8;">
@@ -550,7 +547,7 @@
     </div>
   </section>
 
-  <!-- 3. 핵심 설계 결정 Top4 -->
+  <!-- 3. 핵심 설계 결정  -->
   <section id="sec-3" class="detail-section bg-soft">
     <div class="container">
       <h2 class="section-title">3. 핵심 설계 결정</h2>
@@ -606,8 +603,7 @@
 
       <div class="case">
         <div class="case-head">
-          <h3 class="case-title">② 역할 기반 권한을 도메인 레벨에서 통제</h3>
-          <span class="case-badge">Authorization</span>
+          <h3 class="case-title">② 역할 기반 권한을 도메인 레벨에서 통제</h3>          
         </div>
         <div class="case-grid">
           <div class="case-item">
@@ -627,8 +623,7 @@
 
       <div class="case">
         <div class="case-head">
-          <h3 class="case-title">③ command/query 분리로 변경 영향 범위 최소화</h3>
-          <span class="case-badge">Maintainability</span>
+          <h3 class="case-title">③ command/query 분리로 변경 영향 범위 최소화</h3>        
         </div>
         <div class="case-grid">
           <div class="case-item">
@@ -648,8 +643,7 @@
 
       <div class="case">
         <div class="case-head">
-          <h3 class="case-title">④ 도메인 이벤트 + Outbox + SSE로 정합성/실시간성 동시 확보</h3>
-          <span class="case-badge">Event-driven</span>
+          <h3 class="case-title">④ 도메인 이벤트 + Outbox + SSE로 정합성/실시간성 동시 확보</h3>          
         </div>
         <div class="case-grid">
           <div class="case-item">
@@ -686,8 +680,7 @@
 
       <div class="case">
         <div class="case-head">
-          <h3 class="case-title">전체 흐름</h3>
-          <span class="case-badge">End-to-End</span>
+          <h3 class="case-title">전체 흐름</h3>        
         </div>
 
         <div class="case-grid">
@@ -728,6 +721,13 @@
           이 구조를 통해 <strong>발송만 되고 저장이 안 되는 알림</strong>, <strong>저장은 됐는데 실시간 누락되는 알림</strong> 같은 불일치 가능성을 줄였습니다.
         </p>
       </div>
+
+      <div class="detail-actions">
+        <a href="../../index.html#projects-section" class="btn btn-primary py-2 px-4">
+          프로젝트 목록으로
+        </a>
+      </div>
+
     </div>
   </section>
   

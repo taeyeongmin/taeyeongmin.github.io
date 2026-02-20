@@ -21,40 +21,46 @@
   <link rel="stylesheet" href="../../css/style.css">
 
   <style>
-    :root{
-      --accent:#F96D00;
-      --accent-weak: rgba(249,109,0,.10);
-      --ink:#111;
-      --muted: rgba(0,0,0,.85);
-      --line: rgba(0,0,0,.08);
-      --card-shadow: 0 10px 28px rgba(0,0,0,.08);
+    :root {
+      --accent: #F96D00;
+      --accent-weak: rgba(249, 109, 0, .10);
+      --ink: #111;
+      --muted: rgba(0, 0, 0, .85);
+      --line: rgba(0, 0, 0, .08);
+      --card-shadow: 0 10px 28px rgba(0, 0, 0, .08);
     }
 
     /* navbar가 없는 페이지이므로 상단 여백만 안정적으로 확보 */
-    body { padding-top: 48px; }
+    body {
+      padding-top: 48px;
+    }
 
     /* 헤더 */
-    .detail-hero{
+    .detail-hero {
       padding: 36px 0 18px;
     }
-    .detail-kicker{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
+
+    .detail-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       font-size: 12.5px;
       color: var(--muted);
       border: 1px solid var(--line);
-      background: rgba(0,0,0,.02);
+      background: rgba(0, 0, 0, .02);
       padding: 6px 10px;
       border-radius: 999px;
     }
-    .detail-kicker .dot{
-      width:8px;height:8px;border-radius:50%;
+
+    .detail-kicker .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
       background: var(--accent);
       box-shadow: 0 0 0 3px var(--accent-weak);
     }
 
-    .detail-title{
+    .detail-title {
       margin: 14px 0 10px;
       font-size: clamp(28px, 3vw, 40px);
       font-weight: 800;
@@ -62,7 +68,8 @@
       letter-spacing: -0.5px;
       line-height: 1.2;
     }
-    .detail-sub{
+
+    .detail-sub {
       margin: 0;
       color: var(--muted);
       font-size: 15px;
@@ -71,13 +78,14 @@
     }
 
     /* 상단 요약 카드 */
-    .summary-grid{
-      display:grid;
+    .summary-grid {
+      display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 14px;
       margin-top: 18px;
     }
-    .summary-card{
+
+    .summary-card {
       grid-column: span 6;
       background: #fff;
       border: 1px solid var(--line);
@@ -85,14 +93,16 @@
       box-shadow: var(--card-shadow);
       padding: 16px 16px 14px;
     }
-    .summary-card h4{
+
+    .summary-card h4 {
       margin: 0 0 10px;
       font-size: 14px;
       font-weight: 700;
       color: var(--ink);
     }
-    .summary-card ul{
-      margin:0;
+
+    .summary-card ul {
+      margin: 0;
       padding-left: 18px;
       color: var(--muted);
       font-size: 13.5px;
@@ -100,22 +110,25 @@
     }
 
     /* 섹션 */
-    .detail-section{
+    .detail-section {
       padding: 44px 0;
     }
-    .detail-section.bg-soft{
+
+    .detail-section.bg-soft {
       background: #fafafa;
-      border-top: 1px solid rgba(0,0,0,.03);
-      border-bottom: 1px solid rgba(0,0,0,.03);
+      border-top: 1px solid rgba(0, 0, 0, .03);
+      border-bottom: 1px solid rgba(0, 0, 0, .03);
     }
-    .section-title{
+
+    .section-title {
       margin: 0 0 14px;
       font-size: 20px;
       font-weight: 800;
       letter-spacing: -0.2px;
       color: var(--ink);
     }
-    .section-desc{
+
+    .section-desc {
       margin: 0 0 18px;
       color: var(--muted);
       line-height: 1.8;
@@ -124,121 +137,147 @@
     }
 
     /* 케이스 스터디 카드 */
-    .case{
+    .case {
       border: 1px solid var(--line);
-      background:#fff;
+      background: #fff;
       border-radius: 14px;
       box-shadow: var(--card-shadow);
       padding: 18px;
       margin-top: 14px;
     }
-    .case-head{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:12px;
+
+    .case-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
       margin-bottom: 10px;
     }
-    .case-title{
-      margin:0;
+
+    .case-title {
+      margin: 0;
       font-size: 16px;
       font-weight: 800;
       color: var(--ink);
       letter-spacing: -0.2px;
       line-height: 1.35;
     }
-    .case-badge{
+
+    .case-badge {
       flex: 0 0 auto;
       font-size: 12px;
       font-weight: 700;
-      color: rgba(0,0,0,.72);
+      color: rgba(0, 0, 0, .72);
       border: 1px solid var(--line);
-      background: rgba(0,0,0,.02);
+      background: rgba(0, 0, 0, .02);
       padding: 6px 10px;
       border-radius: 999px;
       white-space: nowrap;
     }
 
-    .case-grid{
-      display:grid;
+    .case-grid {
+      display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 12px;
       margin-top: 10px;
     }
-    .case-item{
+
+    .case-item {
       grid-column: span 4;
-      border: 1px solid rgba(0,0,0,.06);
-      background: rgba(0,0,0,.015);
+      border: 1px solid rgba(0, 0, 0, .06);
+      background: rgba(0, 0, 0, .015);
       border-radius: 12px;
       padding: 12px 12px 10px;
     }
-    .case-item h5{
-      margin:0 0 6px;
+
+    .case-item h5 {
+      margin: 0 0 6px;
       font-size: 12.5px;
       font-weight: 800;
-      color: rgba(0,0,0,.82);
+      color: rgba(0, 0, 0, .82);
     }
-    .case-item p{
-      margin:0;
+
+    .case-item p {
+      margin: 0;
       color: var(--muted);
       font-size: 13.5px;
       line-height: 1.65;
     }
 
-    .metric{
+    .metric {
       margin-top: 12px;
       padding: 12px 12px;
       border-radius: 12px;
-      border: 1px solid rgba(249,109,0,.22);
+      border: 1px solid rgba(249, 109, 0, .22);
       background: var(--accent-weak);
-      color: rgba(0,0,0,.78);
+      color: rgba(0, 0, 0, .78);
       font-size: 13.5px;
       line-height: 1.65;
     }
-    .metric strong{ color: rgba(0,0,0,.92); }
-    .metric .accent{ color: var(--accent); font-weight: 800; }
+
+    .metric strong {
+      color: rgba(0, 0, 0, .92);
+    }
+
+    .metric .accent {
+      color: var(--accent);
+      font-weight: 800;
+    }
 
     /* TOC */
-    .toc{
+    .toc {
       border: 1px solid var(--line);
       border-radius: 14px;
       padding: 14px 16px;
       background: #fff;
       box-shadow: var(--card-shadow);
     }
-    .toc h4{
+
+    .toc h4 {
       margin: 0 0 10px;
       font-size: 14px;
       font-weight: 800;
       color: var(--ink);
     }
-    .toc a{
-      display:block;
+
+    .toc a {
+      display: block;
       padding: 8px 0;
-      color: rgba(0,0,0,.72);
-      border-top: 1px dashed rgba(0,0,0,.10);
-      text-decoration:none;
+      color: rgba(0, 0, 0, .72);
+      border-top: 1px dashed rgba(0, 0, 0, .10);
+      text-decoration: none;
       font-size: 13.5px;
     }
-    .toc a:first-of-type{ border-top: 0; }
-    .toc a:hover{ color: var(--accent); }
+
+    .toc a:first-of-type {
+      border-top: 0;
+    }
+
+    .toc a:hover {
+      color: var(--accent);
+    }
 
     /* 하단 버튼 */
-    .detail-actions{
+    .detail-actions {
       margin-top: 28px;
-      display:flex;
+      display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      align-items:center;
-      justify-content:space-between;
-      border-top: 1px solid rgba(0,0,0,.06);
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(0, 0, 0, .06);
       padding-top: 18px;
     }
 
     /* 반응형 */
-    @media (max-width: 992px){
-      .summary-card{ grid-column: span 12; }
-      .case-item{ grid-column: span 12; }
+    @media (max-width: 992px) {
+      .summary-card {
+        grid-column: span 12;
+      }
+
+      .case-item {
+        grid-column: span 12;
+      }
     }
   </style>
 </head>
@@ -314,7 +353,7 @@
             <ul class="mb-0" style="padding-left:18px; color: rgba(0,0,0,.65); line-height:1.8;">
               <li>메일 발송이 요청 처리 흐름을 막아 응답 지연이 발생</li>
               <li>인덱스/쿼리 구조가 현재 트래픽 패턴과 맞지 않아 병목이 누적</li>
-              <li>전자결재 라인/결재 흐름을 파악하기 어려운 화면 구조</li>              
+              <li>전자결재 라인/결재 흐름을 파악하기 어려운 화면 구조</li>
             </ul>
           </div>
         </div>
@@ -328,7 +367,7 @@
             <ul class="mb-0" style="padding-left:18px; color: rgba(0,0,0,.65); line-height:1.8;">
               <li>사용자 요청 흐름에서 즉시 개선 가능한 지연 제거</li>
               <li>PMS 메뉴 추가 및 타 메뉴와의 데이터 연동</li>
-              <li>실행 계획 기반으로 지속되는 병목부터 제거</li>              
+              <li>실행 계획 기반으로 지속되는 병목부터 제거</li>
               <li>확장 작업에서도 정합성을 유지할 수 있는 기준 확보</li>
             </ul>
           </div>
@@ -340,111 +379,111 @@
 
   <!-- 진행한 일 -->
   <section id="sec-2" class="detail-section">
-    
+
     <div class="container">
-      <h2 class="section-title">2. 진행한 일 | 문제 해결</h2>    
+      <h2 class="section-title">2. 진행한 일 | 문제 해결</h2>
 
       <!-- Case: PL 역할 -->
-        <div class="case">
+      <div class="case">
         <div class="case-head">
-            <h3 class="case-title">프로젝트 리딩 및 운영 조율</h3>
-            <span class="case-badge">PL 역할</span>
+          <h3 class="case-title">프로젝트 리딩 및 운영 조율</h3>
+          <span class="case-badge">PL 역할</span>
         </div>
 
         <div class="case-grid">
-            <div class="case-item">
+          <div class="case-item">
             <h5>팀 구성</h5>
             <p>
-                총 4명의 개발 인원(본인 포함)으로 구성된 팀에서
-                개발 PL 역할을 맡아 업무 분배와 일정 관리, 코드 품질 기준을 조율했습니다.
+              총 4명의 개발 인원(본인 포함)으로 구성된 팀에서
+              개발 PL 역할을 맡아 업무 분배와 일정 관리, 코드 품질 기준을 조율했습니다.
             </p>
-            </div>
+          </div>
 
-            <div class="case-item">
+          <div class="case-item">
             <h5>조율 및 커뮤니케이션</h5>
             <p>
-                기획/운영 부서와의 요구사항 정리, 변경 범위 산정,
-                배포 일정 조율을 담당하며 개발과 타 부서 간의 완충 역할을 수행했습니다.
+              기획/운영 부서와의 요구사항 정리, 변경 범위 산정,
+              배포 일정 조율을 담당하며 개발과 타 부서 간의 완충 역할을 수행했습니다.
             </p>
-            </div>
+          </div>
 
-            <div class="case-item">
+          <div class="case-item">
             <h5>형상 및 일정 관리</h5>
             <p>
-                브랜치 전략과 머지 기준을 정리하고
-                작업 단위별 일정 산정을 통해 병목 구간을 사전에 조정했습니다.
+              브랜치 전략과 머지 기준을 정리하고
+              작업 단위별 일정 산정을 통해 병목 구간을 사전에 조정했습니다.
             </p>
-            </div>
+          </div>
         </div>
 
         <p class="mt-3 mb-0" style="color: rgba(0,0,0,.85); line-height:1.8;">
-            유지보수 프로젝트 특성상 안정성이 중요했기 때문에
-            작업 단위를 작게 쪼개고 변경 범위를 명확히 정의한 뒤 배포했습니다.
-            그 결과 개선 작업 중 서비스 중단이나 주요 장애 없이 점진적 품질 향상이 가능했습니다.
+          유지보수 프로젝트 특성상 안정성이 중요했기 때문에
+          작업 단위를 작게 쪼개고 변경 범위를 명확히 정의한 뒤 배포했습니다.
+          그 결과 개선 작업 중 서비스 중단이나 주요 장애 없이 점진적 품질 향상이 가능했습니다.
         </p>
-        </div>
+      </div>
 
 
-        <!-- Case 1 -->
-        <div class="case">
+      <!-- Case 1 -->
+      <div class="case">
         <div class="case-head">
-            <h3 class="case-title">메일 발송 처리 개선 (동기 → 비동기 + 사전 실패 대응 설계)</h3>
-            <span class="case-badge">성능/운영 안정성</span>
+          <h3 class="case-title">메일 발송 처리 개선 (동기 → 비동기 + 사전 실패 대응 설계)</h3>
+          <span class="case-badge">성능/운영 안정성</span>
         </div>
 
         <div class="case-grid">
-            <div class="case-item">
+          <div class="case-item">
             <h5>배경</h5>
             <p>
-                결재/요청 처리 시 Naver Works 메일 API를 호출하는 로직이
-                요청 흐름에 포함되어 있었고
-                사용자는 완료 버튼 이후 3~4초의 응답 지연을 체감하고 있었습니다.
+              결재/요청 처리 시 Naver Works 메일 API를 호출하는 로직이
+              요청 흐름에 포함되어 있었고
+              사용자는 완료 버튼 이후 3~4초의 응답 지연을 체감하고 있었습니다.
             </p>
-            </div>
+          </div>
 
-            <div class="case-item">
+          <div class="case-item">
             <h5>1차 개선</h5>
             <p>
-                메일 발송 로직에 <code>@Async</code>를 적용하여
-                사용자 요청과 외부 메일 API 호출을 분리했습니다.
-                그 결과 응답 시간은 3~4초에서 0.5초 수준으로 단축되었습니다.
+              메일 발송 로직에 <code>@Async</code>를 적용하여
+              사용자 요청과 외부 메일 API 호출을 분리했습니다.
+              그 결과 응답 시간은 3~4초에서 0.5초 수준으로 단축되었습니다.
             </p>
-            </div>
+          </div>
 
-            <div class="case-item">
+          <div class="case-item">
             <h5>고려한 리스크</h5>
             <p>
-                비동기 전환 이후 외부 API 호출 실패가 발생할 경우
-                예외가 사용자 요청과 분리되어 즉시 인지되지 않을 수 있다는 점을 염두에 두었습니다.
-                또한 네트워크 지연이나 일시적 API 오류가 발생했을 때
-                단발성 호출로 끝나면 메일 누락 가능성이 존재한다고 판단했습니다.
+              비동기 전환 이후 외부 API 호출 실패가 발생할 경우
+              예외가 사용자 요청과 분리되어 즉시 인지되지 않을 수 있다는 점을 염두에 두었습니다.
+              또한 네트워크 지연이나 일시적 API 오류가 발생했을 때
+              단발성 호출로 끝나면 메일 누락 가능성이 존재한다고 판단했습니다.
             </p>
-            </div>
+          </div>
         </div>
 
         <ul style="margin-top:12px; padding-left:18px; color: rgba(0,0,0,.85); line-height:1.8;">
-            <li>비동기 예외가 사용자 요청과 분리되어 실패가 드러나지 않을 가능성</li>
-            <li>외부 API 일시 오류 발생 시 재시도 없이 종료되는 구조적 한계</li>
-            <li>요청 성공과 메일 발송 성공이 동일하게 인식되는 설계 위험</li>
+          <li>비동기 예외가 사용자 요청과 분리되어 실패가 드러나지 않을 가능성</li>
+          <li>외부 API 일시 오류 발생 시 재시도 없이 종료되는 구조적 한계</li>
+          <li>요청 성공과 메일 발송 성공이 동일하게 인식되는 설계 위험</li>
         </ul>
 
         <div class="metric">
-            <strong>사전 보완 조치</strong><br>
-            실제 장애가 발생한 것은 아니었지만
-            운영 환경에서 발생 가능한 리스크를 고려해
-            비동기 예외를 기록하도록 보완했습니다.
-            또한 외부 API 호출 실패 시 일정 횟수 재시도 로직을 추가하고
-            반복 실패 건은 별도로 확인 가능하도록 분리해
-            운영에서 추적 가능한 구조로 개선했습니다.
+          <strong>사전 보완 조치</strong><br>
+          실제 장애가 발생한 것은 아니었지만
+          운영 환경에서 발생 가능한 리스크를 고려해
+          비동기 예외를 기록하도록 보완했습니다.
+          또한 외부 API 호출 실패 시 일정 횟수 재시도 로직을 추가하고
+          반복 실패 건은 별도로 확인 가능하도록 분리해
+          운영에서 추적 가능한 구조로 개선했습니다.
         </div>
 
         <p class="mt-3 mb-0" style="color: rgba(0,0,0,.85); line-height:1.8;">
-            이를 통해 응답 성능 개선과 함께
-            외부 API 의존 구간에서의 잠재적 실패 리스크를 사전에 낮출 수 있었습니다.
-            비동기 처리는 성능 최적화 수단이지만
-            실패 처리 전략까지 함께 설계해야 운영 품질이 완성된다는 점을 체감했습니다.
+          이를 통해 응답 성능 개선과 함께
+          외부 API 의존 구간에서의 잠재적 실패 리스크를 사전에 낮출 수 있었습니다.
+          비동기 처리는 성능 최적화 수단이지만
+          실패 처리 전략까지 함께 설계해야 운영 품질이 완성된다는 점을 체감했습니다.
         </p>
-        </div>
+      </div>
 
       <!-- Case 2 -->
       <div class="case">
@@ -496,61 +535,54 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Case 4 -->
-        <div class="case">
+      <div class="case">
         <div class="case-head">
-            <h3 class="case-title">PMS 메뉴 확장 및 기존 시스템 연동</h3>
-            <span class="case-badge">대규모 기능 확장</span>
+          <h3 class="case-title">PMS 메뉴 확장 및 기존 시스템 연동</h3>
+          <span class="case-badge">대규모 기능 확장</span>
         </div>
 
         <div class="case-grid">
-            <div class="case-item">
+          <div class="case-item">
             <h5>배경</h5>
             <p>
-                PMS 메뉴는 기능 규모가 큰 영역이었으며
-                단순 화면 추가가 아닌 기존 그룹웨어 메뉴들과의 연동이 필요한 확장 작업이었습니다.
-                조직/업무 단위별 사용 흐름에 깊이 연결되어 있는 구조였습니다.
+              PMS 메뉴는 기능 규모가 큰 영역이었으며
+              단순 화면 추가가 아닌 기존 그룹웨어 메뉴들과의 연동이 필요한 확장 작업이었습니다.
+              조직/업무 단위별 사용 흐름에 깊이 연결되어 있는 구조였습니다.
             </p>
-            </div>
+          </div>
 
-            <div class="case-item">
+          <div class="case-item">
             <h5>핵심 과제</h5>
             <p>
-                신규 PMS 기능을 추가하면서도
-                기존 프로젝트 관련 메뉴들과 연결되도록 설계해야 했습니다.
-                특히 상태 값, 데이터 참조 흐름이 충돌하지 않도록 구조를 정리하는 것이 중요했습니다.
+              신규 PMS 기능을 추가하면서도
+              기존 프로젝트 관련 메뉴들과 연결되도록 설계해야 했습니다.
+              특히 상태 값, 데이터 참조 흐름이 충돌하지 않도록 구조를 정리하는 것이 중요했습니다.
             </p>
-            </div>
+          </div>
 
-            <div class="case-item">
+          <div class="case-item">
             <h5>해결</h5>
             <p>
-                기존 메뉴들과의 연계 지점을 먼저 도식화하고
-                데이터 흐름과 참조 관계를 정리한 뒤 확장 구조를 설계했습니다.
-                변경 범위를 단계적으로 적용하여 기존 기능에 영향 없이 통합을 완료했습니다.
+              기존 메뉴들과의 연계 지점을 먼저 도식화하고
+              데이터 흐름과 참조 관계를 정리한 뒤 확장 구조를 설계했습니다.
+              변경 범위를 단계적으로 적용하여 기존 기능에 영향 없이 통합을 완료했습니다.
             </p>
-            </div>
+          </div>
         </div>
 
         <p class="mt-3 mb-0" style="color: rgba(0,0,0,.85); line-height:1.8;">
-            단순 기능 추가가 아니라
-            기존 시스템과 유기적으로 연결되는 확장 작업이었기 때문에
-            데이터 정합성과 권한 체계를 함께 고려하며 통합 구조를 설계했습니다.
-            그 결과 기존 메뉴에 대한 회귀 이슈 없이 PMS 기능을 안정적으로 확장할 수 있었습니다.
+          단순 기능 추가가 아니라
+          기존 시스템과 유기적으로 연결되는 확장 작업이었기 때문에
+          데이터 정합성과 권한 체계를 함께 고려하며 통합 구조를 설계했습니다.
+          그 결과 기존 메뉴에 대한 회귀 이슈 없이 PMS 기능을 안정적으로 확장할 수 있었습니다.
         </p>
-        </div>
-
-      <div class="detail-actions">
-        <a href="../../index.html#projects-section" class="btn btn-primary py-2 px-4">
-          프로젝트 목록으로
-        </a>        
-      </div>
-
+      </div>    
     </div>
   </section>
 
-  <!-- ✅ 3. 성장한 점 -->
+  <!--  3. 성장한 점 -->
   <section id="sec-3" class="detail-section bg-soft">
     <div class="container">
       <h2 class="section-title">3. 성장한 점 | 성과와 배운 점</h2>
@@ -592,7 +624,7 @@
       <div class="detail-actions">
         <a href="../../index.html#projects-section" class="btn btn-primary py-2 px-4">
           프로젝트 목록으로
-        </a>        
+        </a>
       </div>
     </div>
   </section>

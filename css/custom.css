@@ -75,6 +75,21 @@
         gap: 10px;
     }
 
+    .album-title-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .album-title-link:hover {
+      color: #F96D00;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     .album-meta {
       margin-top: 6px;
       display: flex;
