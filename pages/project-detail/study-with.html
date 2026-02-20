@@ -8,7 +8,6 @@
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-  <!-- ✅ 상세 페이지 경로: /pages/project-detail/ 이므로 ../../ 로 올라감 -->
   <link rel="stylesheet" href="../../css/open-iconic-bootstrap.min.css">
   <link rel="stylesheet" href="../../css/animate.css">
   <link rel="stylesheet" href="../../css/owl.carousel.min.css">
@@ -21,34 +20,46 @@
   <link rel="stylesheet" href="../../css/style.css">
 
   <style>
-    :root{
-      --accent:#F96D00;
-      --accent-weak: rgba(249,109,0,.10);
-      --ink:#111;
-      --muted: rgba(0,0,0,.85);
-      --line: rgba(0,0,0,.08);
-      --card-shadow: 0 10px 28px rgba(0,0,0,.08);
+    :root {
+      --accent: #F96D00;
+      --accent-weak: rgba(249, 109, 0, .10);
+      --ink: #111;
+      --muted: rgba(0, 0, 0, .85);
+      --line: rgba(0, 0, 0, .08);
+      --card-shadow: 0 10px 28px rgba(0, 0, 0, .08);
     }
 
     /* ✅ navbar가 없는 페이지이므로 상단 여백만 안정적으로 확보 */
-    body { padding-top: 48px; }
+    body {
+      padding-top: 48px;
+    }
 
     /* 헤더 */
-    .detail-hero{ padding: 36px 0 18px; }
-    .detail-kicker{
-      display:inline-flex; align-items:center; gap:8px;
-      font-size: 12.5px; color: var(--muted);
+    .detail-hero {
+      padding: 36px 0 18px;
+    }
+
+    .detail-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      color: var(--muted);
       border: 1px solid var(--line);
-      background: rgba(0,0,0,.02);
+      background: rgba(0, 0, 0, .02);
       padding: 6px 10px;
       border-radius: 999px;
     }
-    .detail-kicker .dot{
-      width:8px;height:8px;border-radius:50%;
+
+    .detail-kicker .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
       background: var(--accent);
       box-shadow: 0 0 0 3px var(--accent-weak);
     }
-    .detail-title{
+
+    .detail-title {
       margin: 14px 0 10px;
       font-size: clamp(28px, 3vw, 40px);
       font-weight: 800;
@@ -56,7 +67,8 @@
       letter-spacing: -0.5px;
       line-height: 1.2;
     }
-    .detail-sub{
+
+    .detail-sub {
       margin: 0;
       color: var(--muted);
       font-size: 15px;
@@ -65,13 +77,14 @@
     }
 
     /* 상단 요약 카드 */
-    .summary-grid{
-      display:grid;
+    .summary-grid {
+      display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 14px;
       margin-top: 18px;
     }
-    .summary-card{
+
+    .summary-card {
       grid-column: span 6;
       background: #fff;
       border: 1px solid var(--line);
@@ -79,42 +92,53 @@
       box-shadow: var(--card-shadow);
       padding: 16px 16px 14px;
     }
-    .summary-card h4{
+
+    .summary-card h4 {
       margin: 0 0 10px;
       font-size: 14px;
       font-weight: 800;
       color: var(--ink);
     }
-    .summary-card ul{
-      margin:0;
+
+    .summary-card ul {
+      margin: 0;
       padding-left: 18px;
       color: var(--muted);
       font-size: 13.5px;
       line-height: 1.65;
     }
-    .summary-card .meta{
+
+    .summary-card .meta {
       margin: 0;
-      color: rgba(0,0,0,.70);
+      color: rgba(0, 0, 0, .70);
       font-size: 13.5px;
       line-height: 1.65;
     }
-    .meta strong{ color: rgba(0,0,0,.92); }
+
+    .meta strong {
+      color: rgba(0, 0, 0, .92);
+    }
 
     /* 섹션 */
-    .detail-section{ padding: 44px 0; }
-    .detail-section.bg-soft{
-      background: #fafafa;
-      border-top: 1px solid rgba(0,0,0,.03);
-      border-bottom: 1px solid rgba(0,0,0,.03);
+    .detail-section {
+      padding: 44px 0;
     }
-    .section-title{
+
+    .detail-section.bg-soft {
+      background: #fafafa;
+      border-top: 1px solid rgba(0, 0, 0, .03);
+      border-bottom: 1px solid rgba(0, 0, 0, .03);
+    }
+
+    .section-title {
       margin: 0 0 14px;
       font-size: 20px;
       font-weight: 800;
       letter-spacing: -0.2px;
       color: var(--ink);
     }
-    .section-desc{
+
+    .section-desc {
       margin: 0 0 18px;
       color: var(--muted);
       line-height: 1.8;
@@ -123,82 +147,95 @@
     }
 
     /* 카드 */
-    .case{
+    .case {
       border: 1px solid var(--line);
-      background:#fff;
+      background: #fff;
       border-radius: 14px;
       box-shadow: var(--card-shadow);
       padding: 18px;
       margin-top: 14px;
     }
-    .case-head{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:12px;
+
+    .case-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
       margin-bottom: 10px;
     }
-    .case-title{
-      margin:0;
+
+    .case-title {
+      margin: 0;
       font-size: 16px;
       font-weight: 800;
       color: var(--ink);
       letter-spacing: -0.2px;
       line-height: 1.35;
     }
-    .case-badge{
+
+    .case-badge {
       flex: 0 0 auto;
       font-size: 12px;
       font-weight: 800;
-      color: rgba(0,0,0,.72);
+      color: rgba(0, 0, 0, .72);
       border: 1px solid var(--line);
-      background: rgba(0,0,0,.02);
+      background: rgba(0, 0, 0, .02);
       padding: 6px 10px;
       border-radius: 999px;
       white-space: nowrap;
     }
 
-    .case-grid{
-      display:grid;
+    .case-grid {
+      display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 12px;
       margin-top: 10px;
     }
-    .case-item{
+
+    .case-item {
       grid-column: span 4;
-      border: 1px solid rgba(0,0,0,.06);
-      background: rgba(0,0,0,.015);
+      border: 1px solid rgba(0, 0, 0, .06);
+      background: rgba(0, 0, 0, .015);
       border-radius: 12px;
       padding: 12px 12px 10px;
     }
-    .case-item h5{
-      margin:0 0 6px;
+
+    .case-item h5 {
+      margin: 0 0 6px;
       font-size: 12.5px;
       font-weight: 800;
-      color: rgba(0,0,0,.82);
+      color: rgba(0, 0, 0, .82);
     }
-    .case-item p{
-      margin:0;
+
+    .case-item p {
+      margin: 0;
       color: var(--muted);
       font-size: 13.5px;
       line-height: 1.65;
     }
 
-    .metric{
+    .metric {
       margin-top: 12px;
       padding: 12px 12px;
       border-radius: 12px;
-      border: 1px solid rgba(249,109,0,.22);
+      border: 1px solid rgba(249, 109, 0, .22);
       background: var(--accent-weak);
-      color: rgba(0,0,0,.78);
+      color: rgba(0, 0, 0, .78);
       font-size: 13.5px;
       line-height: 1.65;
     }
-    .metric strong{ color: rgba(0,0,0,.92); }
-    .metric .accent{ color: var(--accent); font-weight: 900; }
+
+    .metric strong {
+      color: rgba(0, 0, 0, .92);
+    }
+
+    .metric .accent {
+      color: var(--accent);
+      font-weight: 900;
+    }
 
     /* TOC */
-    .toc{
+    .toc {
       border: 1px solid var(--line);
       border-radius: 14px;
       padding: 14px 16px;
@@ -208,66 +245,79 @@
       top: 24px;
       height: 100%;
     }
-    .toc h4{
+
+    .toc h4 {
       margin: 0 0 10px;
       font-size: 14px;
       font-weight: 900;
       color: var(--ink);
     }
-    .toc a{
-      display:block;
+
+    .toc a {
+      display: block;
       padding: 8px 0;
-      color: rgba(0,0,0,.72);
-      border-top: 1px dashed rgba(0,0,0,.10);
-      text-decoration:none;
+      color: rgba(0, 0, 0, .72);
+      border-top: 1px dashed rgba(0, 0, 0, .10);
+      text-decoration: none;
       font-size: 13.5px;
     }
-    .toc a:first-of-type{ border-top: 0; }
-    .toc a:hover{ color: var(--accent); }
+
+    .toc a:first-of-type {
+      border-top: 0;
+    }
+
+    .toc a:hover {
+      color: var(--accent);
+    }
 
     /* CTA / 심화 문서 링크 */
-    .cta-grid{
-      display:grid;
+    .cta-grid {
+      display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 12px;
       margin-top: 14px;
     }
-    .cta{
+
+    .cta {
       grid-column: span 6;
-      border: 1px solid rgba(0,0,0,.08);
+      border: 1px solid rgba(0, 0, 0, .08);
       background: #fff;
       border-radius: 14px;
       box-shadow: var(--card-shadow);
       padding: 14px 14px 12px;
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
       gap: 10px;
-      text-decoration:none;
+      text-decoration: none;
       color: inherit;
       transition: transform .12s ease, border-color .12s ease;
     }
-    .cta:hover{
+
+    .cta:hover {
       transform: translateY(-1px);
-      border-color: rgba(249,109,0,.35);
+      border-color: rgba(249, 109, 0, .35);
     }
-    .cta .left h5{
+
+    .cta .left h5 {
       margin: 0 0 6px;
       font-size: 14px;
       font-weight: 900;
       letter-spacing: -0.2px;
       color: var(--ink);
     }
-    .cta .left p{
+
+    .cta .left p {
       margin: 0;
-      color: rgba(0,0,0,.72);
+      color: rgba(0, 0, 0, .72);
       font-size: 13.5px;
       line-height: 1.6;
     }
-    .cta .right{
+
+    .cta .right {
       flex: 0 0 auto;
-      display:inline-flex;
-      align-items:center;
+      display: inline-flex;
+      align-items: center;
       gap: 8px;
       font-weight: 900;
       font-size: 13px;
@@ -275,52 +325,71 @@
       white-space: nowrap;
       padding-top: 2px;
     }
-    .cta .right .arrow{
-      width: 24px; height: 24px;
+
+    .cta .right .arrow {
+      width: 24px;
+      height: 24px;
       border-radius: 999px;
-      border: 1px solid rgba(249,109,0,.25);
-      background: rgba(249,109,0,.10);
-      display:flex;
-      align-items:center;
-      justify-content:center;
+      border: 1px solid rgba(249, 109, 0, .25);
+      background: rgba(249, 109, 0, .10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       line-height: 1;
     }
 
     /* 작은 보조 링크 */
-    .tiny-links{
-      display:flex;
+    .tiny-links {
+      display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      align-items:center;
-      justify-content:flex-start;
+      align-items: center;
+      justify-content: flex-start;
       margin-top: 10px;
-      color: rgba(0,0,0,.72);
+      color: rgba(0, 0, 0, .72);
       font-size: 13px;
     }
-    .tiny-links a{
-      color: rgba(0,0,0,.72);
-      text-decoration:none;
-      border-bottom: 1px dashed rgba(0,0,0,.25);
+
+    .tiny-links a {
+      color: rgba(0, 0, 0, .72);
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(0, 0, 0, .25);
     }
-    .tiny-links a:hover{ color: var(--accent); border-bottom-color: rgba(249,109,0,.55); }
+
+    .tiny-links a:hover {
+      color: var(--accent);
+      border-bottom-color: rgba(249, 109, 0, .55);
+    }
 
     /* 하단 버튼 */
-    .detail-actions{
+    .detail-actions {
       margin-top: 28px;
-      display:flex;
+      display: flex;
       gap: 10px;
       flex-wrap: wrap;
-      align-items:center;
-      justify-content:space-between;
-      border-top: 1px solid rgba(0,0,0,.06);
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(0, 0, 0, .06);
       padding-top: 18px;
     }
 
-    @media (max-width: 992px){
-      .summary-card{ grid-column: span 12; }
-      .case-item{ grid-column: span 12; }
-      .cta{ grid-column: span 12; }
-      .toc{ position: static; top: auto; }
+    @media (max-width: 992px) {
+      .summary-card {
+        grid-column: span 12;
+      }
+
+      .case-item {
+        grid-column: span 12;
+      }
+
+      .cta {
+        grid-column: span 12;
+      }
+
+      .toc {
+        position: static;
+        top: auto;
+      }
     }
   </style>
 </head>
@@ -333,7 +402,7 @@
       <span class="detail-kicker"><span class="dot"></span> Side Project · Full Ownership</span>
       <h1 class="detail-title">StudyWith</h1>
       <p class="detail-sub">
-        스터디 그룹 <strong>모집 → 가입 → 운영 → 종료</strong> 전 과정을 지원하는 서비스입니다.<br/>
+        스터디 그룹 <strong>모집 → 가입 → 운영 → 종료</strong> 전 과정을 지원하는 서비스입니다.<br />
         단순 CRUD가 아니라 운영 과정에서 발생하는 혼선(권한/상태/예외)을 <strong>도메인 규칙</strong>으로 고정했고
         특히 <strong>도메인 이벤트 + Outbox + SSE</strong>를 활용해 <strong>트랜잭션 안정성</strong>과 <strong>실시간성</strong>을 동시에 만족하는
         알림 발송 파이프라인을 설계 구현했습니다.
@@ -356,13 +425,14 @@
             <div class="summary-card">
               <h4>프로젝트 정보</h4>
               <p class="meta mb-1"><strong>언어 및 프레임워크</strong> Java, Spring, React, NextJs</p>
-              <p class="meta mb-1"><strong>인증</strong> JWT(Bearer),  OAuth2(Kakao)</p>
-              <p class="meta mb-1"><strong>아키텍처</strong> DDD 기반 Layered,  단방향 의존</p>              
+              <p class="meta mb-1"><strong>인증</strong> JWT(Bearer), OAuth2(Kakao)</p>
+              <p class="meta mb-1"><strong>아키텍처</strong> DDD 기반 Layered, 단방향 의존</p>
               <p class="meta mb-1"><strong>배포</strong> NCP Ubuntu, Nginx Reverse Proxy</p>
               <br>
-              <p class="meta mb-0"><strong>문서화</strong> Swagger UI(OpenAPI), ERD</p>              
-              <div class="tiny-links">                
-                <b><a href="https://github.com/taeyeongmin/study_with_be" target="_blank" rel="noopener">GitHub(BE)</a></b>                
+              <p class="meta mb-0"><strong>문서화</strong> Swagger UI(OpenAPI), ERD</p>
+              <div class="tiny-links">
+                <b><a href="https://github.com/taeyeongmin/study_with_be" target="_blank"
+                    rel="noopener">GitHub(BE)</a></b>
                 <b><a href="https://211.188.53.229/swagger-ui/index.html" target="_blank" rel="noopener">Swagger</a></b>
               </div>
             </div>
@@ -373,12 +443,14 @@
           <div class="toc">
             <h4>목차</h4>
             <a href="#sec-1">1. 설계 역량을 확장하기 위한 프로젝트 | 유연한 구조를 설계하는 능력</a>
-            <a href="#sec-2">2. 서비스 범위 | 사용자,권한,핵심 흐름(모집/운영 분리)</a>
+            <a href="#sec-2">2. 알림 파이프라인 요약 | Domain Event · Outbox · SSE</a>
             <a href="#sec-3">3. 핵심 설계 결정</a>
-            <a href="#sec-4">4. 알림 파이프라인 요약 | Domain Event · Outbox · SSE</a>            
+            <a href="#sec-4">4. 서비스 범위 | 사용자,권한,핵심 흐름(모집/운영 분리)</a>
+            
+            
           </div>
         </div>
-        
+
       </div>
     </div>
   </section>
@@ -403,7 +475,7 @@
 
       <div class="case">
         <div class="case-head">
-          <h3 class="case-title">그래서 스스로에게 던진 질문</h3>          
+          <h3 class="case-title">그래서 스스로에게 던진 질문</h3>
         </div>
 
         <ul class="mb-0" style="padding-left:18px; color: rgba(0,0,0,.70); line-height:1.8;">
@@ -422,7 +494,7 @@
       </p>
 
       <div class="metric">
-        <strong>핵심 의의</strong><br/>
+        <strong>핵심 의의</strong><br />
         이 프로젝트의 가장 큰 성과는 기능 완성이 아니라
         <span class="accent">유연한 프로젝트를 설계하는 능력을 훈련한 것</span>입니다.
         구조를 먼저 고민하고 변경 가능성을 전제로 설계하는 방식으로
@@ -431,119 +503,87 @@
     </div>
   </section>
 
-  <!-- 2. 서비스 범위 -->
+  <!-- 4. 알림 파이프라인 요약 -->
   <section id="sec-2" class="detail-section">
     <div class="container">
-      <h2 class="section-title">2. 서비스 범위 | 사용자,권한,핵심 흐름(모집/운영 분리)</h2>
+      <h2 class="section-title">2. 알림 파이프라인 요약 | Domain Event · Outbox · SSE</h2>
       <p class="section-desc">
-        역할과 상태를 기준으로 사용자 흐름을 정의했습니다.
-        누가(역할) / 언제(상태) / 무엇을(행위) 할 수 있는지가 고정되면
-        기능이 확장되어도 정책과 책임 경계가 흔들리지 않습니다.
+        StudyWith의 알림은 언제/누구에게/무엇을 보내는지가 도메인 정책에 종속됩니다.
+        따라서 알림을 서비스 로직 곳곳에서 직접 호출하지 않고
+        <strong>도메인 이벤트로 분리</strong>한 뒤 Outbox를 통해 안정적으로 처리되도록 설계했습니다.
       </p>
 
       <div class="case">
-        <div class="case-head">
-          <h3 class="case-title">주요 사용자와 역할</h3>          
-        </div>
-
-        <div class="case-grid">
-          <div class="case-item">
-            <h5>비회원</h5>
-            <p>스터디 그룹 목록/상세 조회</p>
-          </div>
-          <div class="case-item">
-            <h5>회원</h5>
-            <p>가입 신청, 참여/탈퇴</p>
-          </div>
-          <div class="case-item">
-            <h5>방장</h5>
-            <p>생성/수정/삭제, 매니저 지정, 가입 승인</p>
-          </div>
-        </div>
-
-        <div class="case-item" style="grid-column: span 12; margin-top: 12px;">
-          <h5>매니저</h5>
-          <p>
-            가입 승인/거부, 공지 관리 등 운영 기능 일부 위임.            
-          </p>
-        </div>
-      </div>
-
-      <div class="case">
-        <div class="case-head">
-          <h3 class="case-title">핵심 사용자 흐름</h3>          
-        </div>
-
-        <div class="case-grid">
-          <div class="case-item">
-            <h5>모집</h5>
-            <p>방장이 그룹을 생성하고 모집 정보를 관리</p>
-          </div>
-          <div class="case-item">
-            <h5>가입</h5>
-            <p>회원이 신청하고 방장/매니저가 승인/거부</p>
-          </div>
-          <div class="case-item">
-            <h5>운영</h5>
-            <p>공지 등 운영 기능을 통해 참여자 관리</p>
-          </div>
-        </div>
-
-        <p class="mt-3 mb-0" style="color: rgba(0,0,0,.80); line-height:1.8;">
-           StudyWith는 상태를 하나의 직선 흐름으로 두지 않고
-          <strong>모집 상태(RecruitStatus)</strong>와 <strong>운영 상태(OperateStatus)</strong>를 분리해
-          각 상태가 의미하는 정책(허용 행위/전이 조건)을 명확히 했습니다.
-        </p>
-      </div>
-      <div class="case">
   <div class="case-head">
-    <h3 class="case-title">상태 전이 정책 요약 (모집 상태 / 운영 상태 분리)</h3>  
+    <h3 class="case-title">전체 흐름</h3>
   </div>
 
   <div class="case-grid">
     <div class="case-item">
-      <h5>모집 상태(RecruitStatus)</h5>
+      <h5>1) Domain Event 발행</h5>
       <p>
-        <strong>RECRUITING → RECRUIT_END</strong> 가능<br/>
-        <strong>RECRUIT_END → RECRUITING</strong> 조건부 가능
-      </p>
-      <p style="margin-top:8px;">
-        <strong>재개 조건</strong><br/>
-        - 정원이 남아있는 경우<br/>
-        - 모집 기간이 지나지 않은 경우
+        가입 승인/거절, 그룹 상태 변경 등 도메인 사건을 이벤트로 발행
       </p>
     </div>
 
     <div class="case-item">
-      <h5>운영 상태(OperateStatus)</h5>
+      <h5>2) Outbox 적재 (BEFORE_COMMIT)</h5>
       <p>
-        <strong>ONGOING → CLOSED</strong> 조건부 가능<br/>
-        <strong>CLOSED → ONGOING</strong> 불가
+        이벤트를 OutboxEvent(PENDING)로 저장하여 비즈니스 트랜잭션과 원자적으로 묶음
       </p>
-      <p style="margin-top:8px;">
-        <strong>종료 조건</strong><br/>
-        - 모집 상태가 <strong>RECRUIT_END</strong> 인 경우에만 가능
+      <br>
+      <p>
+        <strong>도메인 로직은 성공했지만 이벤트가 유실되는 상황을 구조적으로 차단</strong>
       </p>
     </div>
 
     <div class="case-item">
-      <h5>설계 의도</h5>
+      <h5>3) 스케줄러 폴링 → 이벤트 처리 트랜잭션</h5>
       <p>
-        모집과 운영을 하나의 직선 상태로 관리하면
-        재개/종료 조건이 섞여 정책이 흐려질 수 있습니다.<br/><br/>
-        StudyWith는 상태를 분리해
-        <strong>전이 조건</strong>과 <strong>허용 행위</strong>가 섞이지 않도록 고정했습니다.
+        PENDING 이벤트를 조회한 뒤 PROCESSING으로 전이하고 알림 처리 로직을 수행
+      </p>
+      <br>
+      <p>
+        <strong>동일 트랜잭션 내에서</strong> 대상별 Notification 저장 → 
+        Outbox 상태를 DONE / FAILED 로 전이 (재시도 포함)
       </p>
     </div>
   </div>
 
-  <div class="metric">
-    <strong>운영 안정성 포인트</strong><br/>
-    운영 종료는 운영 상태의 변화지만 실제로는 모집이 완전히 끝난 뒤에만 허용됩니다.
-    즉 <span class="accent">RecruitStatus와 OperateStatus 간의 선행 조건</span>을 명시해
-    잘못된 흐름(모집 중 종료, 정책 불일치)을 구조적으로 방지했습니다.
+  <div class="case-grid" style="margin-top: 12px;">
+    <div class="case-item">
+      <h5>4) AFTER_COMMIT → SSE 실시간 전송</h5>
+      <p>
+        Notification이 DB에 커밋된 이후에만 
+        @TransactionalEventListener(phase = AFTER_COMMIT)
+        를 통해 SSE로 클라이언트에 실시간 전송
+      </p>
+      <p>
+        저장과 전송의 트랜잭션 경계를 분리하여 정합성을 확보
+      </p>
+    </div>
+
+    <div class="case-item">
+      <h5>5) 연결 안정성</h5>
+      <p>
+        SSE Registry를 통해 사용자별 커넥션을 관리하고, 
+        주기적 heartbeat(ping) 전송으로 연결을 유지
+      </p>
+      <p>
+        연결 끊김 감지 및 재연결 상황을 고려한 구조 설계
+      </p>
+    </div>
   </div>
+
+  <p class="mt-3 mb-0" style="color: rgba(0,0,0,.80); line-height:1.8;">
+    이 구조를 통해 
+    <strong>도메인 로직은 성공했지만 이벤트가 유실되는 문제</strong>,
+    <strong>저장되지 않은 알림이 실시간으로 전송되는 문제</strong>,
+    <strong>저장은 되었으나 전송 실패로 오해될 수 있는 상황</strong>
+    을 구조적으로 방지했습니다.
+  </p>
 </div>
+
     </div>
   </section>
 
@@ -552,7 +592,7 @@
     <div class="container">
       <h2 class="section-title">3. 핵심 설계 결정</h2>
       <p class="section-desc">
-        기능 구현보다 운영 사고를 줄이기 위한 <strong>결정과 근거</strong>를 남겼습니다.        
+        기능 구현보다 운영 사고를 줄이기 위한 <strong>결정과 근거</strong>를 남겼습니다.
       </p>
 
       <div class="case">
@@ -592,7 +632,7 @@
         </div>
 
         <div class="metric">
-          <strong>핵심 의도</strong><br/>
+          <strong>핵심 의도</strong><br />
           StudyWith는 기능 중심이 아니라
           <span class="accent">도메인 규칙이 가장 안쪽에 위치하는 구조</span>를 목표로 설계했습니다.
           JPA 의존성은 Infrastructure로 한정하고
@@ -603,7 +643,7 @@
 
       <div class="case">
         <div class="case-head">
-          <h3 class="case-title">② 역할 기반 권한을 도메인 레벨에서 통제</h3>          
+          <h3 class="case-title">② 역할 기반 권한을 도메인 레벨에서 통제</h3>
         </div>
         <div class="case-grid">
           <div class="case-item">
@@ -623,7 +663,7 @@
 
       <div class="case">
         <div class="case-head">
-          <h3 class="case-title">③ command/query 분리로 변경 영향 범위 최소화</h3>        
+          <h3 class="case-title">③ command/query 분리로 변경 영향 범위 최소화</h3>
         </div>
         <div class="case-grid">
           <div class="case-item">
@@ -643,7 +683,7 @@
 
       <div class="case">
         <div class="case-head">
-          <h3 class="case-title">④ 도메인 이벤트 + Outbox + SSE로 정합성/실시간성 동시 확보</h3>          
+          <h3 class="case-title">④ 도메인 이벤트 + Outbox + SSE로 정합성/실시간성 동시 확보</h3>
         </div>
         <div class="case-grid">
           <div class="case-item">
@@ -661,76 +701,135 @@
         </div>
 
         <div class="metric">
-          <strong>핵심 의도</strong><br/>
+          <strong>핵심 의도</strong><br />
           알림을 빠르게 보내는 것보다 <span class="accent">실제로 확정된 사실만 누락 없이</span> 전달하는 구조를 목표로 했습니다.
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. 알림 파이프라인 요약 -->
+  <!-- 2. 서비스 범위 -->
   <section id="sec-4" class="detail-section">
     <div class="container">
-      <h2 class="section-title">4. 알림 파이프라인 요약 | Domain Event · Outbox · SSE</h2>
+      <h2 class="section-title">4. 서비스 범위 | 사용자,권한,핵심 흐름(모집/운영 분리)</h2>
       <p class="section-desc">
-        StudyWith의 알림은 언제/누구에게/무엇을 보내는지가 도메인 정책에 종속됩니다.
-        따라서 알림을 서비스 로직 곳곳에서 직접 호출하지 않고
-        <strong>도메인 이벤트로 분리</strong>한 뒤 Outbox를 통해 안정적으로 처리되도록 설계했습니다.
+        역할과 상태를 기준으로 사용자 흐름을 정의했습니다.
+        누가(역할) / 언제(상태) / 무엇을(행위) 할 수 있는지가 고정되면
+        기능이 확장되어도 정책과 책임 경계가 흔들리지 않습니다.
       </p>
 
       <div class="case">
         <div class="case-head">
-          <h3 class="case-title">전체 흐름</h3>        
+          <h3 class="case-title">주요 사용자와 역할</h3>
         </div>
 
         <div class="case-grid">
           <div class="case-item">
-            <h5>1) Domain Event 발행</h5>
-            <p>가입 승인/거절/취소, 그룹 상태 변경 등 도메인 사건을 이벤트로 발행</p>
+            <h5>비회원</h5>
+            <p>스터디 그룹 목록/상세 조회</p>
           </div>
-
           <div class="case-item">
-            <h5>2) Outbox 적재 (BEFORE_COMMIT)</h5>
-            <p>이벤트를 OutboxEvent(PENDING)로 저장하여 트랜잭션과 원자적으로 묶음</p>
+            <h5>회원</h5>
+            <p>가입 신청, 참여/탈퇴</p>
           </div>
-
           <div class="case-item">
-            <h5>3) 폴링/락/재시도 처리</h5>
-            <p>스케줄러가 주기적으로 배치를 돌며 이벤트를 PROCESSING→DONE/FAILED로 전이(최대 재시도 포함)</p>
+            <h5>방장</h5>
+            <p>생성/수정/삭제, 매니저 지정, 가입 승인</p>
           </div>
         </div>
 
-        <div class="case-grid" style="margin-top: 12px;">
-          <div class="case-item">
-            <h5>4) Notification 생성</h5>
-            <p>알림 대상(수신자)을 전략으로 해석하고 대상별 Notification을 저장</p>
-          </div>
+        <div class="case-item" style="grid-column: span 12; margin-top: 12px;">
+          <h5>매니저</h5>
+          <p>
+            가입 승인/거부, 공지 관리 등 운영 기능 일부 위임.
+          </p>
+        </div>
+      </div>
 
-          <div class="case-item">
-            <h5>5) 커밋 후 SSE 발송 (AFTER_COMMIT)</h5>
-            <p>Notification이 DB에 확정된 뒤 SSE로 클라이언트에 실시간 전송</p>
-          </div>
+      <div class="case">
+        <div class="case-head">
+          <h3 class="case-title">핵심 사용자 흐름</h3>
+        </div>
 
+        <div class="case-grid">
           <div class="case-item">
-            <h5>6) 연결 안정성</h5>
-            <p>SSE Registry로 사용자별 커넥션 관리 + 일정 주기 ping(하트비트)로 연결 유지</p>
+            <h5>모집</h5>
+            <p>방장이 그룹을 생성하고 모집 정보를 관리</p>
+          </div>
+          <div class="case-item">
+            <h5>가입</h5>
+            <p>회원이 신청하고 방장/매니저가 승인/거부</p>
+          </div>
+          <div class="case-item">
+            <h5>운영</h5>
+            <p>공지 등 운영 기능을 통해 참여자 관리</p>
           </div>
         </div>
 
         <p class="mt-3 mb-0" style="color: rgba(0,0,0,.80); line-height:1.8;">
-          이 구조를 통해 <strong>발송만 되고 저장이 안 되는 알림</strong>, <strong>저장은 됐는데 실시간 누락되는 알림</strong> 같은 불일치 가능성을 줄였습니다.
+          StudyWith는 상태를 하나의 직선 흐름으로 두지 않고
+          <strong>모집 상태(RecruitStatus)</strong>와 <strong>운영 상태(OperateStatus)</strong>를 분리해
+          각 상태가 의미하는 정책(허용 행위/전이 조건)을 명확히 했습니다.
         </p>
       </div>
+      <div class="case">
+        <div class="case-head">
+          <h3 class="case-title">상태 전이 정책 요약 (모집 상태 / 운영 상태 분리)</h3>
+        </div>
 
+        <div class="case-grid">
+          <div class="case-item">
+            <h5>모집 상태(RecruitStatus)</h5>
+            <p>
+              <strong>RECRUITING → RECRUIT_END</strong> 가능<br />
+              <strong>RECRUIT_END → RECRUITING</strong> 조건부 가능
+            </p>
+            <p style="margin-top:8px;">
+              <strong>재개 조건</strong><br />
+              - 정원이 남아있는 경우<br />
+              - 모집 기간이 지나지 않은 경우
+            </p>
+          </div>
+
+          <div class="case-item">
+            <h5>운영 상태(OperateStatus)</h5>
+            <p>
+              <strong>ONGOING → CLOSED</strong> 조건부 가능<br />
+              <strong>CLOSED → ONGOING</strong> 불가
+            </p>
+            <p style="margin-top:8px;">
+              <strong>종료 조건</strong><br />
+              - 모집 상태가 <strong>RECRUIT_END</strong> 인 경우에만 가능
+            </p>
+          </div>
+
+          <div class="case-item">
+            <h5>설계 의도</h5>
+            <p>
+              모집과 운영을 하나의 직선 상태로 관리하면
+              재개/종료 조건이 섞여 정책이 흐려질 수 있습니다.<br /><br />
+              StudyWith는 상태를 분리해
+              <strong>전이 조건</strong>과 <strong>허용 행위</strong>가 섞이지 않도록 고정했습니다.
+            </p>
+          </div>
+        </div>
+
+        <div class="metric">
+          <strong>운영 안정성 포인트</strong><br />
+          운영 종료는 운영 상태의 변화지만 실제로는 모집이 완전히 끝난 뒤에만 허용됩니다.
+          즉 <span class="accent">RecruitStatus와 OperateStatus 간의 선행 조건</span>을 명시해
+          잘못된 흐름(모집 중 종료, 정책 불일치)을 구조적으로 방지했습니다.
+        </div>
+      </div>
       <div class="detail-actions">
         <a href="../../index.html#projects-section" class="btn btn-primary py-2 px-4">
           프로젝트 목록으로
         </a>
       </div>
-
     </div>
   </section>
-  
+
+
   <footer class="ftco-footer ftco-section">
     <div class="container text-center">
       <p class="mb-0">
